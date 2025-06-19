@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { projects } from "@/utils/constants";
-import { GoArrowUpRight } from "react-icons/go";
+import Gitcoder from "@/components/gitcoder";
+import Project from "@/components/project";
 
 export default function Home() {
   return (
     <div className="max-w-3xl mx-auto mt-16 md:mt-24 mb-16">
+      <Gitcoder />
       <header className="relative mb-16">
         <h1 className="sr-only">Yassine H. - Software Engineer Portfolio</h1>
         <div className="space-y-4 text-primary">
@@ -132,7 +134,7 @@ export default function Home() {
           >
             Projects
           </h2>
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             {projects.map((project) => (
               <Link
                 key={project.id}
@@ -149,6 +151,17 @@ export default function Home() {
                 <span>{project.description}</span>
               </Link>
             ))}
+          </div> */}
+          <div className="flex flex-col sm:flex-row gap-6">
+            {projects.map((el) => (
+              <Project
+                image={el.image}
+                title={el.title}
+                demoLink={el.demoLink}
+                description={el.description}
+                key={el.id}
+              />
+            ))}
           </div>
         </section>
         {/* Interviews Section */}
@@ -159,19 +172,13 @@ export default function Home() {
           >
             Interview and talks
           </h2>
-          <ul className="space-y-3 list-disc pl-4">
-            <li className="text-sm text-primary relative">
-              ReactJS Discussion on{" "}
-              <Link
-                href="https://www.youtube.com/watch?v=7qTAxmutZzE"
-                className="text-accent hover:text-accent/80 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                YouTube
-              </Link>
-            </li>
-          </ul>
+
+          <Project
+            image="/assets/projects/youtube-1.jpg"
+            demoLink="https://www.youtube.com/watch?v=7qTAxmutZzE"
+            title="YouTube"
+            description="Explore the world of ReactJS"
+          />
         </section>
       </main>
     </div>
