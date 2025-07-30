@@ -1,103 +1,186 @@
-import Image from "next/image";
+"use client";
+
+import { useRef, useState } from "react";
+import { MdContentCopy } from "react-icons/md";
+import Project from "@/components/project";
+import { PROJECTS, CONTACT_LINKS } from "../constants/constants";
+import { ImageSpotlightEffect } from "@/components/image-effect";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const containerRef = useRef<HTMLElement>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  const handleEmailCopy = async (email: string) => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  };
+
+  const handleLinkClick = (link: "Email" | string, label: string) => {
+    if (label === "Email") {
+      handleEmailCopy(link);
+    } else {
+      window.open(link, "_blank");
+    }
+  };
+
+  return (
+    <>
+      <main className="border-overlay mx-auto max-w-3xl border-x">
+        {/* Hero Section */}
+        <section className="p-8">
+          <h1 className="border-overlay max-w-2xl text-4xl leading-10 font-semibold text-black">
+            <span className="text-purple">Frontend Engineer</span> specializing
+            in modern web technologies and pixel-perfect user experiences.
+          </h1>
+          <div id="about" />
+        </section>
+
+        <div className="border-overlay pattern-1 h-[65px] border-y" />
+
+        {/* About Section */}
+        <section>
+          <h2 className="bg-cream border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
+            About Me
+          </h2>
+          <motion.img
+            src="/hero.jpg"
+            whileHover={{
+              filter: "grayscale(0%)",
+            }}
+            initial={{ filter: "grayscale(100%)" }}
+            transition={{ duration: 0.3 }}
+          />
+          <div className="space-y-2 px-8 py-5.5">
+            <p>
+              I'm Yassine — a Frontend Engineer from Morocco passionate about
+              building meaningful web experiences that combine technical
+              expertise with creative innovation.
+            </p>
+            <p>
+              I've worked with various tech companies, sharing knowledge through
+              content creation and public speaking while exploring the
+              intersection of code and design.
+            </p>
+            <p>
+              When I'm not crafting user interfaces, you'll find me diving into
+              UI/UX design, practicing Cardistry, or pursuing other creative
+              endeavors that inspire my approach to web development.
+            </p>
+          </div>
+        </section>
+
+        <div className="border-overlay pattern-1 h-[59px] border-t" />
+
+        {/* Projects Section */}
+        <section
+          ref={containerRef}
+          className="border-overlay top-[73px] z-30 border-y"
+          id="projects"
+        >
+          <h2 className="bg-cream sticky top-[73px] z-50 w-full px-8 py-5.5 text-xl font-bold text-black uppercase">
+            Projects
+          </h2>
+
+          {PROJECTS.map((project, index) => (
+            <Project
+              key={project.title}
+              title={project.title}
+              image={project.image}
+              link={project.link}
+              tags={project.tags}
+              index={index}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          ))}
+        </section>
+
+        <div className="border-overlay pattern-1 h-24 border-b" id="contact" />
+
+        {/* CTA Section */}
+        <section className="p-8">
+          <h1 className="text-6xl font-bold text-black">
+            Think we'd work well together? I think so too
+          </h1>
+        </section>
+
+        <div className="border-overlay pattern-1 h-24 border-t" />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+
+      {/* Contact Section - Outside main container */}
+      <section className="border-overlay ml-0 max-w-3xl border-x xl:ml-96">
+        <h2 className="border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
+          Contact
+        </h2>
+        <ImageSpotlightEffect src="/contact.jpg" alt="Contact" />
+        <div className="grid grid-cols-3 gap-0">
+          {CONTACT_LINKS.map((link, index) => {
+            const isLastRow = index >= 3;
+            const isLastColumn = (index + 1) % 3 === 0;
+            const isEmail = link.label === "Email";
+            const isHovered = hoveredIndex === index;
+
+            return (
+              <div
+                key={link.label}
+                className={`flex items-center gap-2 p-8 text-sm transition-all duration-200 ${
+                  !isLastColumn ? "border-r" : ""
+                } ${!isLastRow ? "border-b" : ""} border-gray-200 ${isEmail ? "cursor-copy" : "cursor-pointer"}`}
+                style={{
+                  backgroundColor: isHovered ? link.color : "",
+                }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => handleLinkClick(link.link, link.label)}
+              >
+                <span className="text-lg">
+                  {isEmail && isHovered ? <MdContentCopy /> : link.icon()}
+                </span>
+                <span
+                  className={isEmail && copiedEmail ? "text-green-600" : ""}
+                >
+                  {isEmail && copiedEmail ? "Copied!" : link.label}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="border-overlay pattern-1 mx-auto h-52 max-w-3xl border-x" />
+
+      <footer className="border-overlay ml-0 flex max-w-3xl items-center justify-between border-x border-b px-8 py-5 xl:ml-96">
+        <ul className="flex gap-2 text-lg">
+          <li>
+            <Link href="https://github.com/letyassine" target="_blank">
+              <BsLinkedin />
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="https://www.linkedin.com/in/letyassine/"
+              target="_blank"
+            >
+              <BsGithub />
+            </Link>
+          </li>
+        </ul>
+        <Link
           target="_blank"
-          rel="noopener noreferrer"
+          href="https://github.com/letyassine"
+          className="group text-[11px]"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          git commit -m{" "}
+          <span className="group-hover:underline">'Built by Gitcoder'</span>
+        </Link>
       </footer>
-    </div>
+    </>
   );
 }
