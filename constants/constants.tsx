@@ -9,7 +9,7 @@ import { RxDiscordLogo } from "react-icons/rx";
 export const PROJECTS: ProjectData[] = [
   {
     title: "Opencut",
-    image: "/opencut-1.jpg",
+    image: "/projects/opencut.jpg",
     link: "https://opencut.app",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
@@ -19,7 +19,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     title: "Gitcoders",
-    image: "/gitcoders.jpg",
+    image: "/projects/gitcoders.jpg",
     link: "https://gitcoder.dev",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
@@ -29,7 +29,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     title: "SVGStyleShift",
-    image: "/svg.jpg",
+    image: "/projects/svg.jpg",
     link: "https://svgss.vercel.app/",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
@@ -38,7 +38,7 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     title: "HTMLSemanticRecipes",
-    image: "/html.jpg",
+    image: "/projects/html.jpg",
     link: "https://marketplace.visualstudio.com/items?itemName=gitcoder.vsc-html-semantic-recipes",
     tags: [
       { label: "VSCode", color: "#DBEAFE" },
