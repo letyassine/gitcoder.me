@@ -5,8 +5,6 @@ import { MdContentCopy } from "react-icons/md";
 import Project from "@/components/project";
 import { PROJECTS, CONTACT_LINKS } from "../constants/constants";
 import { ImageSpotlightEffect } from "@/components/image-effect";
-import Link from "next/link";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Home() {
   const containerRef = useRef<HTMLElement>(null);
@@ -35,8 +33,8 @@ export default function Home() {
     <>
       <main className="border-overlay mx-auto max-w-3xl border-x">
         {/* Hero Section */}
-        <section className="p-8">
-          <h1 className="border-overlay max-w-2xl text-4xl leading-10 font-semibold text-black">
+        <section className="px-6 py-8">
+          <h1 className="border-overlay max-w-xl text-3xl font-black sm:text-4xl sm:leading-10 sm:font-semibold">
             <span className="text-purple">Frontend Engineer</span> specializing
             in modern web technologies and pixel-perfect user experiences.
           </h1>
@@ -101,7 +99,7 @@ export default function Home() {
 
         {/* CTA Section */}
         <section className="p-8">
-          <h1 className="text-6xl font-bold text-black">
+          <h1 className="text-3xl font-bold text-black sm:text-6xl">
             Think we'd work well together? I think so too
           </h1>
         </section>
@@ -125,7 +123,7 @@ export default function Home() {
             return (
               <div
                 key={link.label}
-                className={`flex items-center gap-2 p-8 text-sm transition-all duration-200 ${
+                className={`flex justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal ${
                   !isLastColumn ? "border-r" : ""
                 } ${!isLastRow ? "border-b" : ""} border-gray-200 ${isEmail ? "cursor-copy" : "cursor-pointer"}`}
                 style={{
@@ -141,7 +139,11 @@ export default function Home() {
                 <span
                   className={isEmail && copiedEmail ? "text-green-600" : ""}
                 >
-                  {isEmail && copiedEmail ? "Copied!" : link.label}
+                  {isEmail && copiedEmail ? (
+                    "Copied!"
+                  ) : (
+                    <span className={"hidden sm:block"}>{link.label}</span>
+                  )}
                 </span>
               </div>
             );

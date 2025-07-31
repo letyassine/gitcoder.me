@@ -21,12 +21,12 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
         zIndex,
       }}
     >
-      <div className="border-overlay flex items-center justify-between border-y px-8 py-5 text-sm font-medium">
+      <div className="border-overlay flex h-[72px] items-center justify-between border-y px-8 py-5 text-sm font-medium">
         <div className="flex items-center gap-2">
           <span className="text-medium-gray">/</span>
           <h2>{title}</h2>
         </div>
-        <div className="flex gap-2.5">
+        <div className="hidden gap-2.5 sm:flex">
           {tags.map((tag, tagIndex) => (
             <span
               key={tagIndex}
