@@ -8,6 +8,14 @@
   --color-purple: #7c3aed;
 }
 
+::selection {
+  background-color: #e9e5ff;
+}
+
+::-moz-selection {
+  background-color: #e9e5ff;
+}
+
 @layer base {
   html {
     color: var(--color-charcoal);
