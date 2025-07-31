@@ -5,7 +5,6 @@ import { MdContentCopy } from "react-icons/md";
 import Project from "@/components/project";
 import { PROJECTS, CONTACT_LINKS } from "../constants/constants";
 import { ImageSpotlightEffect } from "@/components/image-effect";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
@@ -47,17 +46,13 @@ export default function Home() {
         <div className="border-overlay pattern-1 h-[65px] border-y" />
 
         {/* About Section */}
-        <section>
+        <section className="group">
           <h2 className="bg-cream border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
             About Me
           </h2>
-          <motion.img
+          <img
             src="/hero.jpg"
-            whileHover={{
-              filter: "grayscale(0%)",
-            }}
-            initial={{ filter: "grayscale(100%)" }}
-            transition={{ duration: 0.3 }}
+            className="grayscale transition-all duration-300 group-hover:grayscale-0"
           />
           <div className="space-y-2 px-8 py-5.5">
             <p>
