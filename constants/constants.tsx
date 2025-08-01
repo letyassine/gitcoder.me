@@ -20,7 +20,7 @@ export const PROJECTS: ProjectData[] = [
   {
     title: "Gitcoders",
     image: "/projects/gitcoders.jpg",
-    link: "https://gitcoder.dev",
+    link: "https://gitcoders.dev",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
       { label: "TailwindCSS", color: "#E0F2FE" },
