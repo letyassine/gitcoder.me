@@ -157,7 +157,7 @@ export default function Home() {
           <Link
             href="https://cal.com/gitcoder/30min"
             target="_blank"
-            className="bg-charcoal hover:bg-charcoal/90 w-[210px] px-3 py-2 text-center text-[15px] text-white duration-75"
+            className="bg-charcoal hover:bg-charcoal/90 w-[210px] px-3 py-2 text-center text-[15px] font-medium tracking-tighter text-white duration-75"
           >
             Book a Call Now
           </Link>
