@@ -151,7 +151,9 @@ export default function Home() {
       </section>
       <div className="border-overlay mx-auto h-52 max-w-3xl border-b">
         <div className="border-overlay mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8">
-          <h1 className="text-2xl font-black">Got 30 minutes? Let's talk!</h1>
+          <h1 className="text-2xl font-black text-black">
+            Got 30 minutes? Let's talk!
+          </h1>
           <Link
             href="https://cal.com/gitcoder/30min"
             target="_blank"
