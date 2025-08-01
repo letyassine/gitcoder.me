@@ -56,7 +56,8 @@ export default function Home() {
           <p>
             I'm Yassine — a Frontend Engineer from Morocco passionate about
             building meaningful web experiences that combine technical expertise
-            with creative innovation.
+            with creative innovation. Specializing in React and the Next.js
+            ecosystem.
           </p>
           <p>
             I've worked with various tech companies, sharing knowledge through
