@@ -28,17 +28,8 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    title: "SVGStyleShift",
-    image: "/projects/svg.jpg",
-    link: "https://svgss.vercel.app/",
-    tags: [
-      { label: "NextJS", color: "#F1F5F9" },
-      { label: "Open Source", color: "#D1FAE5" },
-    ],
-  },
-  {
     title: "HTMLSemanticRecipes",
-    image: "/projects/html.jpg",
+    image: "/projects/vscode.jpg",
     link: "https://marketplace.visualstudio.com/items?itemName=gitcoder.vsc-html-semantic-recipes",
     tags: [
       { label: "VSCode", color: "#DBEAFE" },
