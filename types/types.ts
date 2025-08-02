@@ -9,3 +9,11 @@ export interface ProjectData {
   link: string;
   tags: Tag[];
 }
+
+export interface JobExprienceData {
+  title: string;
+  date: string;
+  companyName: string;
+  companyLink: string;
+  location: string;
+}

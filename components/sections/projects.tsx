@@ -1,3 +1,4 @@
+import { PROJECTS } from "@/constants/constants";
 import Image from "next/image";
 import { ProjectData } from "@/types/types";
 
@@ -57,4 +58,23 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
   );
 };
 
-export default Project;
+export default function Projects() {
+  return (
+    <section className="border-overlay top-[73px] z-30 border-y" id="projects">
+      <h2 className="bg-cream sticky top-[73px] z-50 w-full px-8 py-5.5 text-xl font-bold text-black uppercase">
+        Projects
+      </h2>
+
+      {PROJECTS.map((project, index) => (
+        <Project
+          key={project.title}
+          title={project.title}
+          image={project.image}
+          link={project.link}
+          tags={project.tags}
+          index={index}
+        />
+      ))}
+    </section>
+  );
+}
