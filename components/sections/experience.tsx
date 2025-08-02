@@ -52,10 +52,13 @@ export default function Experience() {
 
         <div className="border-overlay px-8 py-5.5 text-sm">
           <div className="flex items-center justify-between">
-            <span className="font-medium">Open to job opportunities</span>
-            <span className="text-charcoal/80 hidden sm:block">
-              [Present – YourCompany]
-            </span>
+            <div>
+              <div className="font-medium">Open to job opportunities</div>
+              <div className="text-charcoal/80 mt-1 text-xs capitalize">
+                YourCompany • Earth
+              </div>
+            </div>
+            <span className="text-charcoal/80">[Present]</span>
           </div>
         </div>
 
@@ -64,9 +67,7 @@ export default function Experience() {
             <span className="font-medium">
               Public speaker & Content creator
             </span>
-            <span className="text-charcoal/80 hidden sm:block">
-              [2021 – Present]
-            </span>
+            <span className="text-charcoal/80">[2021 – Present]</span>
           </div>
         </div>
       </div>
