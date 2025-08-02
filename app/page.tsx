@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <PatternDivider />
       <Experience />
-      <PatternDivider height="h-[59px]" />
+      <PatternDivider height="h-[59px]" className="" />
       <Projects />
       <PatternDivider height="h-24" className="border-b" />
       <ConnectPrompt />
