@@ -81,13 +81,6 @@ export const CONTACT_LINKS = [
 export const PREVIOUS_JOBS: JobExprienceData[] = [
   {
     title: "Senior Frontend Developer",
-    companyName: "ValueEQ",
-    companyLink: "https://www.valueeq.com/",
-    location: "Remote",
-    date: "Nov 2024 – Mar 2025",
-  },
-  {
-    title: "Senior Frontend Developer",
     companyName: "Codia",
     companyLink: "https://www.codiadev.it/",
     location: "Remote",
@@ -106,5 +99,25 @@ export const PREVIOUS_JOBS: JobExprienceData[] = [
     companyLink: "https://www.blocxs.one/",
     location: "Remote",
     date: "Jul 2023 – Oct 2023",
+  },
+];
+export const CURRENT_JOBS: JobExprienceData[] = [
+  {
+    title: "Open to job opportunities",
+    companyName: "YourCompany",
+    companyLink: "https://www.valueeq.com/",
+    location: "Earth",
+    date: "Present",
+  },
+  {
+    title: "Senior Frontend Developer",
+    companyName: "ValueEQ",
+    companyLink: "https://www.valueeq.com/",
+    location: "Remote",
+    date: "Nov 2024 – Present",
+  },
+  {
+    title: "Public speaker & Content creator",
+    date: "2021 – Present",
   },
 ];

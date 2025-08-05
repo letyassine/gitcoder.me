@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { JobExprienceData } from "@/types/types";
-import { PREVIOUS_JOBS } from "@/constants/constants";
+import { CURRENT_JOBS, PREVIOUS_JOBS } from "@/constants/constants";
 
 function JobExperience({
   title,
@@ -14,16 +14,22 @@ function JobExperience({
       <div className="flex items-center justify-between">
         <div>
           <div className="font-medium">{title}</div>
-          <div className="text-charcoal/80 mt-1 text-xs capitalize">
-            <Link
-              className="hover:underline"
-              target="_blank"
-              href={companyLink}
-            >
-              {companyName}
-            </Link>{" "}
-            • {location}
-          </div>
+          {companyName ? (
+            <div className="text-charcoal/80 mt-1 text-xs capitalize">
+              {companyLink ? (
+                <Link
+                  className="hover:underline"
+                  target="_blank"
+                  href={companyLink}
+                >
+                  {companyName}
+                </Link>
+              ) : (
+                <span>{companyName}</span>
+              )}{" "}
+              • {location}
+            </div>
+          ) : null}
         </div>
         <span className="text-charcoal/80">[{date}]</span>
       </div>
@@ -50,26 +56,16 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="border-overlay px-8 py-5.5 text-sm">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="font-medium">Open to job opportunities</div>
-              <div className="text-charcoal/80 mt-1 text-xs capitalize">
-                YourCompany • Earth
-              </div>
-            </div>
-            <span className="text-charcoal/80">[Present]</span>
-          </div>
-        </div>
-
-        <div className="border-overlay border-t px-8 py-5.5 text-sm">
-          <div className="flex items-center justify-between">
-            <span className="font-medium">
-              Public speaker & Content creator
-            </span>
-            <span className="text-charcoal/80">[2021 – Present]</span>
-          </div>
-        </div>
+        {CURRENT_JOBS.map((job) => (
+          <JobExperience
+            key={job.companyName || job.title}
+            title={job.title}
+            companyName={job.companyName}
+            companyLink={job.companyLink}
+            location={job.location}
+            date={job.date}
+          />
+        ))}
       </div>
 
       {/* Previous Section */}

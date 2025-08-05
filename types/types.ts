@@ -13,7 +13,7 @@ export interface ProjectData {
 export interface JobExprienceData {
   title: string;
   date: string;
-  companyName: string;
-  companyLink: string;
-  location: string;
+  companyName?: string;
+  companyLink?: string;
+  location?: string;
 }
