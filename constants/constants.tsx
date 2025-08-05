@@ -84,7 +84,7 @@ export const PREVIOUS_JOBS: JobExprienceData[] = [
     companyName: "ValueEQ",
     companyLink: "https://www.valueeq.com/",
     location: "Remote",
-    date: "Nov 2024 – Mar 2025",
+    date: "Nov 2024 – Present",
   },
   {
     title: "Senior Frontend Developer",
