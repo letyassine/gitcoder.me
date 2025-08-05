@@ -81,6 +81,13 @@ export const CONTACT_LINKS = [
 export const PREVIOUS_JOBS: JobExprienceData[] = [
   {
     title: "Senior Frontend Developer",
+    companyName: "ValueEQ",
+    companyLink: "https://www.valueeq.com/",
+    location: "Remote",
+    date: "Nov 2024 – Mar 2025",
+  },
+  {
+    title: "Senior Frontend Developer",
     companyName: "Codia",
     companyLink: "https://www.codiadev.it/",
     location: "Remote",
