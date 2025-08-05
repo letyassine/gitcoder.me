@@ -106,7 +106,6 @@ export const CURRENT_JOBS: JobExprienceData[] = [
   {
     title: "Open to job opportunities",
     companyName: "YourCompany",
-    companyLink: "https://www.valueeq.com/",
     location: "Earth",
     date: "Present",
   },
