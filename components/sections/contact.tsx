@@ -18,14 +18,6 @@ export default function Contact() {
     }
   };
 
-  const handleLinkClick = (link: "Email" | string, label: string) => {
-    if (label === "Email") {
-      handleEmailCopy(link);
-    } else {
-      window.open(link, "_blank");
-    }
-  };
-
   return (
     <section className="border-overlay max-w-3xl border-y" id="contact">
       <h2 className="px-8 py-5.5 text-xl font-bold text-black uppercase">
@@ -39,30 +31,56 @@ export default function Contact() {
           const isEmail = link.label === "Email";
           const isHovered = hoveredIndex === index;
 
+          // If it's email, render a div with click handler
+          if (isEmail) {
+            return (
+              <div
+                key={link.label}
+                className={`flex justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal ${
+                  !isLastColumn ? "border-r" : ""
+                } ${!isLastRow ? "border-b" : ""} cursor-copy border-gray-200`}
+                style={{
+                  backgroundColor: isHovered ? link.color : "",
+                }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => handleEmailCopy(link.link)}
+              >
+                <span className="text-lg">
+                  {isHovered ? <MdContentCopy /> : link.icon()}
+                </span>
+                <span className={copiedEmail ? "text-green-600" : ""}>
+                  {copiedEmail ? (
+                    "Copied!"
+                  ) : (
+                    <span className={"hidden sm:block"}>{link.label}</span>
+                  )}
+                </span>
+              </div>
+            );
+          }
+
+          // For non-email links, use Link component
           return (
-            <div
+            <Link
               key={link.label}
+              href={link.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`flex justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal ${
                 !isLastColumn ? "border-r" : ""
-              } ${!isLastRow ? "border-b" : ""} border-gray-200 ${isEmail ? "cursor-copy" : "cursor-pointer"}`}
+              } ${!isLastRow ? "border-b" : ""} cursor-pointer border-gray-200 hover:no-underline`}
               style={{
                 backgroundColor: isHovered ? link.color : "",
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              onClick={() => handleLinkClick(link.link, link.label)}
             >
-              <span className="text-lg">
-                {isEmail && isHovered ? <MdContentCopy /> : link.icon()}
+              <span className="text-lg">{link.icon()}</span>
+              <span>
+                <span className={"hidden sm:block"}>{link.label}</span>
               </span>
-              <span className={isEmail && copiedEmail ? "text-green-600" : ""}>
-                {isEmail && copiedEmail ? (
-                  "Copied!"
-                ) : (
-                  <span className={"hidden sm:block"}>{link.label}</span>
-                )}
-              </span>
-            </div>
+            </Link>
           );
         })}
       </div>
