@@ -28,6 +28,7 @@ import {
   SiCss,
   SiCypress,
   SiPostman,
+  SiVercel,
 } from "@icons-pack/react-simple-icons";
 
 export const TECH_STACK = [
@@ -37,6 +38,7 @@ export const TECH_STACK = [
   { name: "redux", logo: () => <SiRedux className="size-6" /> },
   { name: "typescript", logo: () => <SiTypescript className="size-6" /> },
   { name: "cypress", logo: () => <SiCypress className="size-6" /> },
+  { name: "vercel", logo: () => <SiVercel className="size-6" /> },
   { name: "tailwindcss", logo: () => <SiTailwindcss className="size-6" /> },
   { name: "bitbucket", logo: () => <SiBitbucket className="size-6" /> },
   { name: "storybook", logo: () => <SiStorybook className="size-6" /> },

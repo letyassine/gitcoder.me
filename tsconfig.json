@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/constants/constants.tsx"
+    "lib/constants.tsx"
   ],
   "exclude": ["node_modules"]
 }
