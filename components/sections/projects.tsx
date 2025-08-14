@@ -1,6 +1,7 @@
 import { PROJECTS } from "@/lib/constants/constants";
 import Image from "next/image";
 import { ProjectData } from "@/types/types";
+import Link from "next/link";
 
 interface ProjectProps extends ProjectData {
   index: number;
@@ -23,10 +24,13 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
       }}
     >
       <div className="border-overlay flex h-[72px] items-center justify-between border-y px-8 py-5 text-sm font-medium">
-        <div className="flex items-center gap-2">
+        <Link
+          href={link}
+          className="hover:text-purple flex items-center gap-2 duration-100"
+        >
           <span className="text-medium-gray">/</span>
           <h2>{title}</h2>
-        </div>
+        </Link>
         <div className="hidden gap-2.5 sm:flex">
           {tags.map((tag, tagIndex) => (
             <span
