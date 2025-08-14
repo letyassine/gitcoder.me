@@ -1,4 +1,4 @@
-import { PROJECTS } from "@/constants/constants";
+import { PROJECTS } from "@/lib/constants/constants";
 import Image from "next/image";
 import { ProjectData } from "@/types/types";
 

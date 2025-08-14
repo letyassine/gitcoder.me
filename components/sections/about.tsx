@@ -1,3 +1,5 @@
+import LogoCloud from "../logo-cloud";
+
 export default function About() {
   return (
     <section className="group">
@@ -8,24 +10,16 @@ export default function About() {
         src="/hero.jpg"
         className="grayscale transition-all duration-300 group-hover:grayscale-0"
       />
-      <div className="space-y-2 px-8 py-5.5">
+      <div className="space-y-6 px-8 py-5.5">
         <p>
-          I'm Yassine — a Frontend Engineer from Morocco passionate about
-          building meaningful web experiences that combine technical expertise
-          with creative innovation. Specializing in React and the Next.js
-          ecosystem.
+          I'm Yassine — a software engineer especially focused on frontend
+          development, architecting React/Next.js solutions, and creating
+          exceptional user experiences. I'm also passionate about content
+          creation and public speaking in the tech community,
         </p>
-        <p>
-          I've worked with various tech companies, sharing knowledge through
-          content creation and public speaking while exploring the intersection
-          of code and design.
-        </p>
-        <p>
-          When I'm not crafting user interfaces, you'll find me diving into
-          UI/UX design, practicing Cardistry, or pursuing other creative
-          endeavors that inspire my approach to web development.
-        </p>
+        <p>Powered by a carefully curated tech stack.</p>
       </div>
+      <LogoCloud />
     </section>
   );
 }

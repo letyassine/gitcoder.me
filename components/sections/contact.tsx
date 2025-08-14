@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { ImageSpotlightEffect } from "../image-effect";
-import { CONTACT_LINKS } from "@/constants/constants";
 import Link from "next/link";
+import { CONTACT_LINKS } from "@/lib/constants/constants";
 import { MdContentCopy } from "react-icons/md";
 
 export default function Contact() {
@@ -20,10 +19,9 @@ export default function Contact() {
 
   return (
     <section className="border-overlay max-w-3xl border-y" id="contact">
-      <h2 className="px-8 py-5.5 text-xl font-bold text-black uppercase">
+      <h2 className="border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
         Contact
       </h2>
-      <ImageSpotlightEffect src="/contact.jpg" alt="Contact" />
       <div className="grid grid-cols-3 gap-0">
         {CONTACT_LINKS.map((link, index) => {
           const isLastRow = index >= 3;
@@ -31,7 +29,6 @@ export default function Contact() {
           const isEmail = link.label === "Email";
           const isHovered = hoveredIndex === index;
 
-          // If it's email, render a div with click handler
           if (isEmail) {
             return (
               <div
@@ -60,7 +57,6 @@ export default function Contact() {
             );
           }
 
-          // For non-email links, use Link component
           return (
             <Link
               key={link.label}
