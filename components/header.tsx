@@ -39,6 +39,15 @@ const Header = () => {
         </li>
         <li>
           <Link
+            target="_blank"
+            href="https://github.com/letyassine"
+            className="hover:underline"
+          >
+            Github
+          </Link>
+        </li>
+        <li>
+          <Link
             href="#contact"
             className="bg-charcoal hover:bg-charcoal/90 px-3 py-2 text-white duration-75"
           >
