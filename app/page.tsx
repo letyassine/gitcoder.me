@@ -19,7 +19,6 @@ export default function Home() {
       <Experience />
       <PatternDivider className="" />
       <Projects />
-      <PatternDivider className="" />
       <BookGallrey />
       <PatternDivider height="h-24" className="border-b" />
       <ConnectPrompt />

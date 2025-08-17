@@ -1,16 +1,35 @@
 "use client";
 import clsx from "clsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { JSX } from "react";
 import BOOKS from "@/data/books";
+import PatternDivider from "../pattern-divider";
 
 const animationStyle = "transition-all duration-500 ease will-change-auto";
 
-export default function BookGallrey(): JSX.Element {
+export default function BookGallrey(): JSX.Element | null {
   const [focusedIndex, setFocusedIndex] = useState(2);
+  const [shouldRender, setShouldRender] = useState(true);
+
+  useEffect(() => {
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
+
+    if (isSafari || isMobile) {
+      setShouldRender(false);
+    }
+  }, []);
+
+  if (!shouldRender) {
+    return null;
+  }
 
   return (
     <section>
+      <PatternDivider className="" />
       <h2 className="bg-cream border-overlay w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase">
         BOOKSHELF
       </h2>
