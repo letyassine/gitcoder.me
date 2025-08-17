@@ -24,7 +24,7 @@ export default function Contact() {
       </h2>
       <div className="grid grid-cols-3 gap-0">
         {CONTACT_LINKS.map((link, index) => {
-          const isLastRow = index >= 3;
+          const isLastRow = index >= 6;
           const isLastColumn = (index + 1) % 3 === 0;
           const isEmail = link.label === "Email";
           const isHovered = hoveredIndex === index;
