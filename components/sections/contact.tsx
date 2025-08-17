@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { CONTACT_LINKS } from "@/lib/constants";
+import CONTACT_LINKS from "@/data/contact-links";
 import { MdContentCopy } from "react-icons/md";
 
 export default function Contact() {

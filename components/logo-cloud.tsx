@@ -1,6 +1,6 @@
 import { InfiniteSlider } from "@/components/infinite-slider";
 import { ProgressiveBlur } from "@/components/progressive-blur";
-import { TECH_STACK } from "@/lib/constants";
+import TECH_STACK from "@/data/tech-stack";
 
 export default function LogoCloud() {
   return (

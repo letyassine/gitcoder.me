@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { JobExprienceData } from "@/types/types";
-import { CURRENT_JOBS, PREVIOUS_JOBS } from "@/lib/constants";
+import { CURRENT_JOBS, PREVIOUS_JOBS } from "@/data/experience";
 
 function JobExperience({
   title,
