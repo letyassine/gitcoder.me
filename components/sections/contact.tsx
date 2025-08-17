@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import CONTACT_LINKS from "@/data/contact-links";
 import { MdContentCopy } from "react-icons/md";
+import { cn } from "@/lib/utils";
 
 export default function Contact() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -33,9 +34,11 @@ export default function Contact() {
             return (
               <div
                 key={link.label}
-                className={`flex justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal ${
-                  !isLastColumn ? "border-r" : ""
-                } ${!isLastRow ? "border-b" : ""} cursor-copy border-gray-200`}
+                className={cn(
+                  "flex cursor-copy justify-center gap-2 border-gray-200 p-8 text-sm transition-all duration-200 sm:justify-normal",
+                  !isLastColumn && "border-r",
+                  !isLastRow && "border-b",
+                )}
                 style={{
                   backgroundColor: isHovered ? link.color : "",
                 }}
@@ -63,9 +66,11 @@ export default function Contact() {
               href={link.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal ${
-                !isLastColumn ? "border-r" : ""
-              } ${!isLastRow ? "border-b" : ""} cursor-pointer border-gray-200 hover:no-underline`}
+              className={cn(
+                "flex cursor-pointer justify-center gap-2 border-gray-200 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal",
+                !isLastColumn && "border-r",
+                !isLastRow && "border-b",
+              )}
               style={{
                 backgroundColor: isHovered ? link.color : "",
               }}
