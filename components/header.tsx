@@ -30,15 +30,6 @@ const Header = () => {
         </li>
         <li>
           <Link
-            target="_blank"
-            href="https://gitcoder.substack.com/"
-            className="hover:underline"
-          >
-            Blog
-          </Link>
-        </li>
-        <li>
-          <Link
             href="#contact"
             className="bg-charcoal hover:bg-charcoal/90 px-3 py-2 text-white duration-75"
           >
