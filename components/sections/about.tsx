@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LogoCloud from "../logo-cloud";
 
 export default function About() {
@@ -6,9 +7,12 @@ export default function About() {
       <h2 className="bg-cream border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
         About Me
       </h2>
-      <img
+      <Image
         src="/hero.jpg"
         className="grayscale transition-all duration-300 group-hover:grayscale-0"
+        alt="about"
+        height={440}
+        width={1536}
       />
       <div className="space-y-3 px-8 py-5.5">
         <p>
