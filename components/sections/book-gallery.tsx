@@ -30,7 +30,7 @@ export default function BookGallrey(): JSX.Element | null {
 
   return (
     <section>
-      <PatternDivider className="border-overlay border-t" />
+      <PatternDivider className="" />
       <h2 className="bg-cream border-overlay w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase">
         BOOKSHELF
       </h2>
