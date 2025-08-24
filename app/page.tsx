@@ -8,6 +8,7 @@ import Contact from "@/components/sections/contact";
 import PatternDivider from "@/components/pattern-divider";
 import ConnectPrompt from "@/components/sections/connect-prompt";
 import BookGallrey from "@/components/sections/book-gallery";
+import Crafts from "@/components/sections/crafts";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <Experience />
       <PatternDivider className="" />
       <Projects />
+      <PatternDivider className="border-b" />
+      <Crafts />
       <BookGallrey />
       <PatternDivider height="h-24" className="border-b" />
       <ConnectPrompt />

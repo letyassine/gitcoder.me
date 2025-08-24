@@ -1,5 +1,6 @@
 "use client";
-import clsx from "clsx";
+
+import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { JSX } from "react";
 import BOOKS from "@/data/books";
@@ -29,7 +30,7 @@ export default function BookGallrey(): JSX.Element | null {
 
   return (
     <section>
-      <PatternDivider className="" />
+      <PatternDivider className="border-overlay border-t" />
       <h2 className="bg-cream border-overlay w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase">
         BOOKSHELF
       </h2>
@@ -66,7 +67,7 @@ export default function BookGallrey(): JSX.Element | null {
                   setFocusedIndex(index);
                 }
               }}
-              className={clsx(
+              className={cn(
                 "flex shrink-0 cursor-pointer flex-row items-center outline-none",
                 focusedIndex !== index &&
                   "hover:-translate-y-4 focus-visible:-translate-y-4",
@@ -76,7 +77,7 @@ export default function BookGallrey(): JSX.Element | null {
               style={{ perspective: "1000px", WebkitPerspective: "1000px" }}
             >
               <div
-                className={clsx(
+                className={cn(
                   "z-50 h-full w-[44px] shrink-0 origin-right py-4 brightness-[0.80] contrast-[2.00]",
                   animationStyle,
                 )}
@@ -101,7 +102,7 @@ export default function BookGallrey(): JSX.Element | null {
                 </h2>
               </div>
               <div
-                className={clsx(
+                className={cn(
                   "relative z-10 h-72 shrink-0 origin-left overflow-hidden border-gray-900 brightness-[0.80] contrast-[2.00]",
                   animationStyle,
                 )}
@@ -127,7 +128,7 @@ export default function BookGallrey(): JSX.Element | null {
                 <img
                   src={book.coverUrl}
                   alt={book.title}
-                  className={clsx("h-full w-48 bg-cover", animationStyle)}
+                  className={cn("h-full w-48 bg-cover", animationStyle)}
                 />
               </div>
             </button>
