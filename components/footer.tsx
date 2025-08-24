@@ -12,7 +12,7 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="https://github.com/letyassine" target="_blank">
+          <Link href="https://github.com/letyassine/gitcoder.me" target="_blank">
             <BsGithub />
           </Link>
         </li>
