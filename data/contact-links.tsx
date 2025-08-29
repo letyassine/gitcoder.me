@@ -59,7 +59,7 @@ const CONTACT_LINKS = [
   {
     icon: () => <TbBrandBluesky />,
     label: "BlueSky",
-    link: "https://bsky.app/profile/gitcoder.bsky.social",
+    link: "https://bsky.app/profile/gitcoder.me",
     color: "#E3F3FF",
   },
 ];
