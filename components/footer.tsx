@@ -89,11 +89,11 @@ const Footer = () => {
       </ul>
       <Link
         target="_blank"
-        href="https://github.com/letyassine"
-        className="group text-[11px]"
+        href="https://x.com/thegitcoder"
+        className="group text-[11px] transition-all duration-300"
       >
-        git commit -m{" "}
-        <span className="group-hover:underline">'Built by Gitcoder'</span>
+        Built by <span className="group-hover:underline">Gitcoder</span>{" "}
+        <span className="text-[13px]">⎯⎯⟡</span>
       </Link>
     </footer>
   );
