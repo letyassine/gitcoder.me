@@ -49,7 +49,7 @@ const Header = () => {
         </li>
         <li>
           <Link
-            href="#contact"
+            href="/#contact"
             className="bg-charcoal hover:bg-charcoal/90 px-3 py-2 text-white duration-75"
           >
             Contact
