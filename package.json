@@ -1,7 +1,8 @@
 {
-  "name": "gitcoder.me",
+  "name": "gitcoder",
   "version": "0.1.0",
   "private": true,
+  "author": "gitcoder",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
