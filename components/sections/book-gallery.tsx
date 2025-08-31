@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { JSX } from "react";
 import BOOKS from "@/data/books";
-import PatternDivider from "../pattern-divider";
+import PatternDivider from "../ui/pattern-divider";
 
 const animationStyle = "transition-all duration-500 ease will-change-auto";
 

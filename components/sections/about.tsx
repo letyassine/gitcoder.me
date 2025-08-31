@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoCloud from "../logo-cloud";
+import LogoCloud from "../ui/logo-cloud";
 
 export default function About() {
   return (

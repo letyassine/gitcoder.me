@@ -5,7 +5,7 @@ import About from "@/components/sections/about";
 import Experience from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
 import Contact from "@/components/sections/contact";
-import PatternDivider from "@/components/pattern-divider";
+import PatternDivider from "@/components/ui/pattern-divider";
 import ConnectPrompt from "@/components/sections/connect-prompt";
 import BookGallrey from "@/components/sections/book-gallery";
 import Crafts from "@/components/sections/crafts";

@@ -1,5 +1,5 @@
 import React from "react";
-import CraftCard from "../craft-card";
+import CraftCard from "../ui/craft-card";
 import CtaButton from "../crafts/cta/cta-btn";
 
 const Crafts = () => {
