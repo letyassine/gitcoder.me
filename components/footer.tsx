@@ -21,14 +21,14 @@ const Links = [
 
 const Footer = () => {
   return (
-    <footer className="border-overlay mx-auto flex max-w-3xl items-center justify-between border-x border-b px-6 py-3">
+    <footer className="border-overlay mx-auto flex max-w-3xl items-center justify-between border-x border-y px-6 py-3">
       <Link
         target="_blank"
         href="https://x.com/thegitcoder"
         className="group text-[11px] transition-all duration-300"
       >
         Built by <span className="group-hover:underline">Gitcoder</span>{" "}
-        <span className="text-[13px]">⎯⎯⟡</span>
+        <span className="text-[13px]">⟡</span>
       </Link>
       <ul className="flex gap-1 text-lg">
         {Links.map((link) => (
