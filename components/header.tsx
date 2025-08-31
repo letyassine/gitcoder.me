@@ -38,12 +38,12 @@ const Header = () => {
 
       <ul className="flex gap-4 text-[13px] leading-[14px] font-semibold tracking-tighter">
         <li>
-          <Link href="#about" className="hover:underline">
+          <Link href="/#about" className="hover:underline">
             About
           </Link>
         </li>
         <li>
-          <Link href="#projects" className="hover:underline">
+          <Link href="/#projects" className="hover:underline">
             Projects
           </Link>
         </li>
