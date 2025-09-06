@@ -1,3 +1,5 @@
+"use client";
+
 import PROJECTS from "@/data/projects";
 import Image from "next/image";
 import { ProjectData } from "@/types/types";
