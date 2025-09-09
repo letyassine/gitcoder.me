@@ -5,7 +5,6 @@ export default function Hero() {
         <span className="text-purple">Frontend Engineer</span> specializing in
         modern web technologies and pixel-perfect user experiences.
       </h1>
-      <div id="about" />
     </section>
   );
 }

@@ -3,7 +3,7 @@ import LogoCloud from "../ui/logo-cloud";
 
 export default function About() {
   return (
-    <section className="group">
+    <section className="group scroll-mt-[73px]" id="about">
       <h2 className="bg-cream border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
         About Me
       </h2>

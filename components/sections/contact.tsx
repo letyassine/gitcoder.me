@@ -37,7 +37,7 @@ export default function Contact() {
               <div
                 key={link.label}
                 className={cn(
-                  "flex cursor-copy justify-center gap-2 border-gray-200 p-8 text-sm transition-all duration-200 sm:justify-normal",
+                  "border-overlay flex cursor-copy justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal",
                   !isLastColumn && "border-r",
                   !isLastRow && "border-b",
                 )}
@@ -69,7 +69,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "flex cursor-pointer justify-center gap-2 border-gray-200 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal",
+                "border-overlay flex cursor-pointer justify-center gap-2 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal",
                 !isLastColumn && "border-r",
                 !isLastRow && "border-b",
               )}
