@@ -21,7 +21,7 @@ const CraftCard = ({
       </Link>
       <figure
         className={cn(
-          "border-purple flex w-full items-center justify-center border border-dashed bg-white bg-[url('/texture.svg')] bg-repeat",
+          "border-purple flex w-full items-center justify-center border border-dashed bg-white bg-[url('/texture.svg')] bg-repeat dark:bg-black/20",
           className,
         )}
       >

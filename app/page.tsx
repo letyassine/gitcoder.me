@@ -10,7 +10,7 @@ import Crafts from "@/components/sections/crafts";
 
 export default function Home() {
   return (
-    <main className="border-overlay mx-auto max-w-3xl border-x">
+    <main className="border-overlay mx-auto max-w-3xl border-x dark:border-[#1a1a1a]">
       <Hero />
       <PatternDivider />
       <About />

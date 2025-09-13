@@ -13,7 +13,7 @@ export default function LogoCloud() {
           gap={112}
         >
           {TECH_STACK.map((el) => (
-            <div key={el.name} className="flex">
+            <div key={el.name} className="flex dark:text-white">
               {el.logo()}
             </div>
           ))}

@@ -15,7 +15,7 @@ const BOOKS: IBook[] = [
   {
     title: "Monk Mode",
     coverUrl: "/books/book-2.png",
-    spineBackgroundColor: "#000",
+    spineBackgroundColor: "#272727",
     spineForegroundColor: "#fff",
   },
   {

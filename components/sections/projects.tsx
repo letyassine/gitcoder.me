@@ -19,19 +19,19 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
 
   return (
     <div
-      className="sticky bg-white"
+      className="dark:bg-charcoal-black sticky bg-white"
       style={{
         top: `${topOffset}px`,
         zIndex,
       }}
     >
-      <div className="border-overlay flex h-[72px] items-center justify-between border-y px-8 py-5 text-sm font-medium">
+      <div className="border-overlay flex h-[72px] items-center justify-between border-y bg-[dark:bg-[#212121]] px-8 py-5 text-sm font-medium dark:border-[#1a1a1a] dark:bg-[#212121]">
         <Link
           href={link}
           className="hover:text-purple flex items-center gap-2 duration-100"
         >
-          <span className="text-medium-gray">/</span>
-          <h2>{title}</h2>
+          <span className="text-medium-gray dark:text-[#707070]">/</span>
+          <h2 className="dark:text-[#e8e8e8]">{title}</h2>
         </Link>
         <div className="hidden gap-2.5 sm:flex">
           {tags.map((tag, tagIndex) => (
@@ -66,8 +66,11 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
 
 export default function Projects() {
   return (
-    <section className="border-overlay top-[73px] z-30 border-y" id="projects">
-      <h2 className="bg-cream sticky top-[73px] z-50 w-full px-8 py-5.5 text-xl font-bold text-black uppercase">
+    <section
+      className="border-overlay top-[73px] z-30 border-y dark:border-[#1a1a1a]"
+      id="projects"
+    >
+      <h2 className="bg-cream dark:bg-charcoal-black sticky top-[73px] z-50 w-full px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
         Projects
       </h2>
 

@@ -21,8 +21,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="border-overlay max-w-3xl border-t" id="contact">
-      <h2 className="border-overlay border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
+    <section
+      className="border-overlay max-w-3xl border-t dark:border-[#1a1a1a]"
+      id="contact"
+    >
+      <h2 className="border-overlay dark:bg-charcoal-black border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:border-[#1a1a1a] dark:text-white">
         Contact
       </h2>
       <div className="grid grid-cols-3 gap-0">
@@ -37,7 +40,7 @@ export default function Contact() {
               <div
                 key={link.label}
                 className={cn(
-                  "border-overlay flex cursor-copy justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal",
+                  "border-overlay hover:text-charcoal-black flex cursor-copy justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal dark:border-[#1a1a1a] dark:text-white",
                   !isLastColumn && "border-r",
                   !isLastRow && "border-b",
                 )}
@@ -69,7 +72,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "border-overlay flex cursor-pointer justify-center gap-2 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal",
+                "border-overlay hover:text-charcoal-black flex cursor-pointer justify-center gap-2 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal dark:border-[#1a1a1a] dark:text-white",
                 !isLastColumn && "border-r",
                 !isLastRow && "border-b",
               )}
@@ -87,15 +90,15 @@ export default function Contact() {
           );
         })}
       </div>
-      <div className="border-overlay mx-auto h-52 max-w-3xl border-t">
-        <div className="border-overlay mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8">
-          <h1 className="text-2xl font-black text-black">
+      <div className="border-overlay mx-auto h-52 max-w-3xl border-t dark:border-[#1a1a1a]">
+        <div className="border-overlay mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8 dark:border-[#1a1a1a]">
+          <h1 className="text-2xl font-black text-black dark:text-white">
             Got 30 minutes? Let's talk!
           </h1>
           <Link
             href="https://cal.com/gitcoder/30min"
             target="_blank"
-            className="bg-charcoal hover:bg-charcoal/90 w-[210px] px-3 py-2 text-center text-[15px] font-medium tracking-tighter text-white duration-75"
+            className="bg-charcoal hover:bg-charcoal/90 dark:text-charcoal-black w-[210px] px-3 py-2 text-center text-[15px] font-medium tracking-tighter text-white duration-75 dark:bg-white dark:hover:bg-white/90"
           >
             Book a Call Now
           </Link>

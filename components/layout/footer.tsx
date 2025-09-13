@@ -21,7 +21,7 @@ const Links = [
 
 const Footer = () => {
   return (
-    <footer className="border-overlay mx-auto flex max-w-3xl items-center justify-between border-x border-y px-6 py-3">
+    <footer className="border-overlay mx-auto flex max-w-3xl items-center justify-between border-x border-y border-b-0 px-6 py-3 dark:border-[#1a1a1a] dark:text-white">
       <Link
         target="_blank"
         href="https://x.com/thegitcoder"
