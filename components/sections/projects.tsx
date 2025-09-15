@@ -28,6 +28,7 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
       <div className="border-overlay flex h-[72px] items-center justify-between border-y bg-[dark:bg-[#212121]] px-8 py-5 text-sm font-medium dark:border-[#1a1a1a] dark:bg-[#212121]">
         <Link
           href={link}
+          target="_blank"
           className="group flex items-center gap-2 duration-100"
         >
           <span className="text-medium-gray dark:text-[#707070]">/</span>
