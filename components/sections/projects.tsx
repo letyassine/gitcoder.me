@@ -28,10 +28,12 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
       <div className="border-overlay flex h-[72px] items-center justify-between border-y bg-[dark:bg-[#212121]] px-8 py-5 text-sm font-medium dark:border-[#1a1a1a] dark:bg-[#212121]">
         <Link
           href={link}
-          className="hover:text-purple flex items-center gap-2 duration-100"
+          className="group flex items-center gap-2 duration-100"
         >
           <span className="text-medium-gray dark:text-[#707070]">/</span>
-          <h2 className="dark:text-[#e8e8e8]">{title}</h2>
+          <h2 className="group-hover:text-purple dark:text-[#e8e8e8]">
+            {title}
+          </h2>
         </Link>
         <div className="hidden gap-2.5 sm:flex">
           {tags.map((tag, tagIndex) => (

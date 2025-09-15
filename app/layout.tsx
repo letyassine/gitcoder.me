@@ -79,7 +79,7 @@ export default function RootLayout({
         className={`${spaceGrotesk.className} bg-cream dark:bg-charcoal-black`}
       >
         <Providers>
-          <div className="fixed top-4 right-4 hidden lg:block">
+          <div className="fixed top-[19px] right-4 hidden lg:block">
             <ThemeToggle />
           </div>
           <Header />
