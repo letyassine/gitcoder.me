@@ -9,7 +9,7 @@ export default function PatternDivider({
 }: PatternDividerProps) {
   return (
     <div
-      className={`border-overlay pattern-light dark:border-[#1a1a1a] ${height} ${className}`}
+      className={`border-overlay pattern-light dark:border-charcoal-gray ${height} ${className}`}
     />
   );
 }

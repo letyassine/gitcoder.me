@@ -5,8 +5,8 @@ import CtaButton from "../crafts/cta/cta-btn";
 
 const Crafts = () => {
   return (
-    <section className="border-overlay border-b dark:border-[#1a1a1a]">
-      <h2 className="bg-cream border-overlay dark:bg-charcoal-black border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:border-[#1a1a1a] dark:text-white">
+    <section className="border-overlay dark:border-charcoal-gray border-b">
+      <h2 className="bg-cream border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
         CRAFTS
       </h2>
       <CraftCard className="py-32">

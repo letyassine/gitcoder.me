@@ -22,10 +22,10 @@ export default function Contact() {
 
   return (
     <section
-      className="border-overlay max-w-3xl border-t dark:border-[#1a1a1a]"
+      className="border-overlay dark:border-charcoal-gray max-w-3xl border-t"
       id="contact"
     >
-      <h2 className="border-overlay dark:bg-charcoal-black border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:border-[#1a1a1a] dark:text-white">
+      <h2 className="border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
         Contact
       </h2>
       <div className="grid grid-cols-3 gap-0">
@@ -40,7 +40,7 @@ export default function Contact() {
               <div
                 key={link.label}
                 className={cn(
-                  "border-overlay hover:text-charcoal-black flex cursor-copy justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal dark:border-[#1a1a1a] dark:text-white",
+                  "border-overlay hover:text-charcoal-black dark:border-charcoal-gray flex cursor-copy justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal dark:text-white",
                   !isLastColumn && "border-r",
                   !isLastRow && "border-b",
                 )}
@@ -72,7 +72,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "border-overlay hover:text-charcoal-black flex cursor-pointer justify-center gap-2 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal dark:border-[#1a1a1a] dark:text-white",
+                "border-overlay hover:text-charcoal-black dark:border-charcoal-gray flex cursor-pointer justify-center gap-2 p-8 text-sm transition-all duration-200 hover:no-underline sm:justify-normal dark:text-white",
                 !isLastColumn && "border-r",
                 !isLastRow && "border-b",
               )}
@@ -90,8 +90,8 @@ export default function Contact() {
           );
         })}
       </div>
-      <div className="border-overlay mx-auto h-52 max-w-3xl border-t dark:border-[#1a1a1a]">
-        <div className="border-overlay mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8 dark:border-[#1a1a1a]">
+      <div className="border-overlay dark:border-charcoal-gray mx-auto h-52 max-w-3xl border-t">
+        <div className="border-overlay dark:border-charcoal-gray mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8">
           <h1 className="text-2xl font-black text-black dark:text-white">
             Got 30 minutes? Let's talk!
           </h1>

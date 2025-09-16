@@ -31,7 +31,7 @@ export default function BookGallrey(): JSX.Element | null {
   return (
     <section>
       <PatternDivider className="" />
-      <h2 className="bg-cream border-overlay dark:bg-charcoal-black w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase dark:border-[#1a1a1a] dark:text-white">
+      <h2 className="bg-cream border-overlay dark:bg-charcoal-black dark:border-charcoal-gray w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
         BOOKSHELF
       </h2>
       <div className="border-overlay overflow-hidden border-b p-8">

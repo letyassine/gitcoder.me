@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <nav
       className={cn(
-        "border-overlay sticky top-0 z-[1000] mx-auto flex h-[73px] w-full max-w-3xl items-center justify-between border-x border-b p-4 backdrop-blur-xl sm:p-6 dark:border-[#1a1a1a]",
+        "border-overlay dark:border-charcoal-gray sticky top-0 z-[1000] mx-auto flex h-[73px] w-full max-w-3xl items-center justify-between border-x border-b p-4 backdrop-blur-xl sm:p-6",
         isScrolled ? "dark:bg-charcoal-black/80 bg-white/80" : "",
       )}
     >

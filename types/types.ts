@@ -17,3 +17,10 @@ export interface JobExprienceData {
   companyLink?: string;
   location?: string;
 }
+
+export interface IBook {
+  title: string;
+  coverUrl: string;
+  spineBackgroundColor: string;
+  spineForegroundColor: string;
+}

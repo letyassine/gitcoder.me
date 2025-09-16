@@ -3,11 +3,16 @@
 
 @theme {
   --color-charcoal: #3b3b3b;
+  --color-charcoal-black: #121212;
+  --color-charcoal-gray: #1a1a1a;
   --color-overlay: #2222221a;
   --color-cream: #fcfbfa;
   --color-medium-gray: #c2c2c2;
+  --color-light-gray: #e8e8e8;
+  --color-silver-gray: #a8a8a8;
+  --color-dim-gray: #707070;
+  --color-dark-gary: #212121;
   --color-purple: #7c3aed;
-  --color-charcoal-black: #121212;
 }
 
 ::selection {

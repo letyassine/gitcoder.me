@@ -25,14 +25,14 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
         zIndex,
       }}
     >
-      <div className="border-overlay flex h-[72px] items-center justify-between border-y bg-[dark:bg-[#212121]] px-8 py-5 text-sm font-medium dark:border-[#1a1a1a] dark:bg-[#212121]">
+      <div className="border-overlay dark:bg-dark-gary dark:border-charcoal-gray flex h-[72px] items-center justify-between border-y bg-[dark:bg-dark-gary] px-8 py-5 text-sm font-medium">
         <Link
           href={link}
           target="_blank"
           className="group flex items-center gap-2 duration-100"
         >
-          <span className="text-medium-gray dark:text-[#707070]">/</span>
-          <h2 className="group-hover:text-purple dark:text-[#e8e8e8]">
+          <span className="text-medium-gray dark:text-dim-gray">/</span>
+          <h2 className="group-hover:text-purple dark:text-light-gray">
             {title}
           </h2>
         </Link>
@@ -70,7 +70,7 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
 export default function Projects() {
   return (
     <section
-      className="border-overlay top-[73px] z-30 border-y dark:border-[#1a1a1a]"
+      className="border-overlay dark:border-charcoal-gray top-[73px] z-30 border-y"
       id="projects"
     >
       <h2 className="bg-cream dark:bg-charcoal-black sticky top-[73px] z-50 w-full px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">

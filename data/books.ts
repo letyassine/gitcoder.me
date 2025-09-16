@@ -1,9 +1,4 @@
-interface IBook {
-  title: string;
-  coverUrl: string;
-  spineBackgroundColor: string;
-  spineForegroundColor: string;
-}
+import { IBook } from "@/types/types";
 
 const BOOKS: IBook[] = [
   {
