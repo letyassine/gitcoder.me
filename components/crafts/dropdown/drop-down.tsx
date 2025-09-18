@@ -60,7 +60,7 @@ export default function DropDown() {
                 </div>
               </div>
             ) : (
-              <span className="text-base-white">Select a Laracon</span>
+              <span className="text-base-white">Select a City</span>
             )}
             <MenuIcon isOpen={open} />
           </ListboxButton>
