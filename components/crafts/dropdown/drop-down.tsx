@@ -26,7 +26,7 @@ export default function DropDown() {
   return (
     <Listbox value={selectedLaracon} onChange={setSelectedLaracon}>
       {({ open }) => (
-        <>
+        <div className="relative">
           <ListboxButton
             style={{
               boxShadow: open
@@ -69,7 +69,7 @@ export default function DropDown() {
               <ListboxOptions
                 static
                 transition
-                className="absolute top-20 right-48 mt-2 w-[350px] pb-5 text-white focus:bg-transparent focus:ring-0 focus:outline-none"
+                className="absolute top-11 -right-3 mt-2 w-[350px] pb-5 text-white focus:bg-transparent focus:ring-0 focus:outline-none"
               >
                 {LARACONS_DATA.map((laracon, index) => (
                   <ListboxOption
@@ -135,7 +135,7 @@ export default function DropDown() {
               </ListboxOptions>
             )}
           </AnimatePresence>
-        </>
+        </div>
       )}
     </Listbox>
   );
