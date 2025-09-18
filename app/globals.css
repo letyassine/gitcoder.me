@@ -13,9 +13,10 @@
   --color-dim-gray: #707070;
   --color-dark-gary: #212121;
   --color-purple: #7c3aed;
+  --lab-mask-offset: 48px;
 }
 
-::selection {
+/* ::selection {
   background-color: #e9e5ff;
 }
 
@@ -29,6 +30,37 @@
 
 .dark ::-moz-selection {
   background-color: #2d1b69;
+} */
+
+.lab-bg {
+  -webkit-mask:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+      transparent
+    ),
+    linear-gradient(
+      to right,
+      transparent,
+      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+      transparent
+    );
+  mask:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+      transparent
+    ),
+    linear-gradient(
+      to right,
+      transparent,
+      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+      transparent
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
 }
 
 @layer base {
