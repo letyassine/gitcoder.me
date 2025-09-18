@@ -10,7 +10,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckAnimatedIcon, CheckStaticIcon, MenuIcon } from "./icons";
 
-const LARACONS_DATA: { id: number; name: string }[] = [
+const CITIES_DATA: { id: number; name: string }[] = [
   { id: 1, name: "Denver, USA" },
   { id: 2, name: "Brisbane, Australia" },
   { id: 3, name: "Amsterdam, Netherlands" },
@@ -71,10 +71,10 @@ export default function DropDown() {
                 transition
                 className="absolute top-11 -right-3 mt-2 w-[350px] pb-5 text-white focus:bg-transparent focus:ring-0 focus:outline-none"
               >
-                {LARACONS_DATA.map((laracon, index) => (
+                {CITIES_DATA.map((city, index) => (
                   <ListboxOption
-                    key={laracon.id}
-                    value={laracon}
+                    key={city.id}
+                    value={city}
                     className={`my-2 w-[336px] cursor-pointer focus:bg-transparent focus:ring-0 focus:outline-none`}
                     style={{
                       position: "relative",
@@ -102,7 +102,7 @@ export default function DropDown() {
                           y: 0,
                           transition: {
                             duration: 0.225,
-                            delay: (LARACONS_DATA.length - index - 1) * 0.06,
+                            delay: (CITIES_DATA.length - index - 1) * 0.06,
                             ease: [0.23, 1, 0.32, 1],
                           },
                         }}
@@ -127,7 +127,7 @@ export default function DropDown() {
                             <div className="size-3" />
                           )}
                         </div>
-                        <span className="text-base-white">{laracon.name}</span>
+                        <span className="text-base-white">{city.name}</span>
                       </motion.div>
                     )}
                   </ListboxOption>
