@@ -14,7 +14,7 @@ const Crafts = () => {
         <DropDown />
       </CraftCard>
       <CraftCard title="call-to-action" className="py-32">
-        <CtaButton onClick={() => alert("Clicked!")}>Book a Call Now</CtaButton>
+        <CtaButton>Book a Call Now</CtaButton>
       </CraftCard>
     </section>
   );
