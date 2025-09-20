@@ -5,7 +5,7 @@ export interface Tag {
 
 export interface ProjectData {
   title: string;
-  image: string;
+  image: any;
   link: string;
   tags: Tag[];
 }
@@ -20,7 +20,7 @@ export interface JobExprienceData {
 
 export interface IBook {
   title: string;
-  coverUrl: string;
+  coverUrl: any;
   spineBackgroundColor: string;
   spineForegroundColor: string;
 }

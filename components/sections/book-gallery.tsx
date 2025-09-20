@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { JSX } from "react";
 import BOOKS from "@/data/books";
 import PatternDivider from "../ui/pattern-divider";
+import Image from "next/image";
 
 const animationStyle = "transition-all duration-500 ease will-change-auto";
 
@@ -125,10 +126,11 @@ export default function BookGallrey(): JSX.Element | null {
                   }}
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={book.coverUrl}
                   alt={book.title}
                   className={cn("h-full w-48 bg-cover", animationStyle)}
+                  placeholder="blur"
                 />
               </div>
             </button>

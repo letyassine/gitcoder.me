@@ -56,6 +56,7 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
           height={1283}
           width={2048}
           alt={`${title} project`}
+          placeholder="blur"
         />
         <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <span className="rounded-full bg-black/80 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">

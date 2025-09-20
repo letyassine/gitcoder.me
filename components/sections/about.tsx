@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LogoCloud from "../ui/logo-cloud";
+import hero from "/public/hero.jpg";
 
 export default function About() {
   return (
@@ -8,11 +9,12 @@ export default function About() {
         About Me
       </h2>
       <Image
-        src="/hero.jpg"
+        src={hero}
         className="grayscale transition-all duration-300 group-hover:grayscale-0"
         alt="about"
         height={440}
         width={1536}
+        placeholder="blur"
       />
       <div className="space-y-3 px-8 py-5.5 dark:text-white">
         <p>

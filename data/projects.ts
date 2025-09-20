@@ -1,9 +1,12 @@
 import { ProjectData } from "@/types/types";
+import OpenCutImage from "/public/projects/opencut.jpg";
+import GitCodersImage from "/public/projects/gitcoders.jpg";
+import VsCodeImage from "/public/projects/vscode.jpg";
 
 const PROJECTS: ProjectData[] = [
   {
     title: "Opencut",
-    image: "/projects/opencut.jpg",
+    image: OpenCutImage,
     link: "https://opencut.app",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
@@ -13,7 +16,7 @@ const PROJECTS: ProjectData[] = [
   },
   {
     title: "Gitcoders",
-    image: "/projects/gitcoders.jpg",
+    image: GitCodersImage,
     link: "https://gitcoders.dev",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
@@ -23,7 +26,7 @@ const PROJECTS: ProjectData[] = [
   },
   {
     title: "HTMLSemanticRecipes",
-    image: "/projects/vscode.jpg",
+    image: VsCodeImage,
     link: "https://marketplace.visualstudio.com/items?itemName=gitcoder.vsc-html-semantic-recipes",
     tags: [
       { label: "VSCode", color: "#DBEAFE" },
