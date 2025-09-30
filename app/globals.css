@@ -2,18 +2,23 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-charcoal: #3b3b3b;
-  --color-charcoal-black: #121212;
-  --color-charcoal-gray: #1a1a1a;
-  --color-overlay: #2222221a;
-  --color-cream: #fcfbfa;
-  --color-medium-gray: #c2c2c2;
-  --color-light-gray: #e8e8e8;
-  --color-silver-gray: #a8a8a8;
-  --color-dim-gray: #707070;
-  --color-dark-gary: #212121;
-  --color-purple: #7c3aed;
-  --lab-mask-offset: 48px;
+	--color-charcoal: #3b3b3b;
+	--color-charcoal-black: #000000;
+	--color-charcoal-gray: #1a1a1a;
+	--color-overlay: #2222221a;
+	--color-cream: #fcfbfa;
+	--color-medium-gray: #c2c2c2;
+	--color-light-gray: #e8e8e8;
+	--color-silver-gray: #a8a8a8;
+	--color-dim-gray: #707070;
+	--color-dark-gary: #212121;
+	--color-purple: #7c3aed;
+	--lab-mask-offset: 48px;
+}
+
+.cursed {
+	mask-image: radial-gradient(transparent 1px, rgb(15, 17, 21), #ffffff 1px);
+	mask-size: 4px 4px;
 }
 
 /* ::selection {
@@ -33,49 +38,49 @@
 } */
 
 .lab-bg {
-  -webkit-mask:
-    linear-gradient(
-      to bottom,
-      transparent,
-      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
-      transparent
-    ),
-    linear-gradient(
-      to right,
-      transparent,
-      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
-      transparent
-    );
-  mask:
-    linear-gradient(
-      to bottom,
-      transparent,
-      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
-      transparent
-    ),
-    linear-gradient(
-      to right,
-      transparent,
-      #fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
-      transparent
-    );
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
+	-webkit-mask:
+		linear-gradient(
+			to bottom,
+			transparent,
+			#fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+			transparent
+		),
+		linear-gradient(
+			to right,
+			transparent,
+			#fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+			transparent
+		);
+	mask:
+		linear-gradient(
+			to bottom,
+			transparent,
+			#fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+			transparent
+		),
+		linear-gradient(
+			to right,
+			transparent,
+			#fff var(--lab-mask-offset) calc(100% - var(--lab-mask-offset)),
+			transparent
+		);
+	-webkit-mask-composite: source-in;
+	mask-composite: intersect;
 }
 
 @layer base {
-  html {
-    color: var(--color-charcoal);
-    scroll-behavior: smooth;
-  }
+	html {
+		color: var(--color-charcoal);
+		scroll-behavior: smooth;
+	}
 }
 
 @layer utilities {
-  .pattern-light {
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b3b3b' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-  }
+	.pattern-light {
+		background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233b3b3b' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+	}
 
-  .dark .pattern-light {
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-  }
+	.dark .pattern-light {
+		background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+	}
 }
