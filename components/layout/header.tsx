@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "../ui/theme-toggle";
+import Button from "../ui/button";
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -53,12 +54,9 @@ const Header = () => {
 					</Link>
 				</li>
 				<li>
-					<Link
-						href="/#contact"
-						className="bg-charcoal hover:bg-charcoal/90 dark:text-charcoal-black px-3 py-2 text-white duration-75 dark:bg-white dark:hover:bg-white/90"
-					>
-						Contact
-					</Link>
+					<Button asChild>
+						<Link href="/#contact">Contact</Link>
+					</Button>
 				</li>
 			</ul>
 		</nav>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import CONTACT_LINKS from "@/data/contact-links";
 import { MdContentCopy } from "react-icons/md";
 import { cn } from "@/lib/utils";
+import Button from "../ui/button";
 
 export default function Contact() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -95,13 +96,9 @@ export default function Contact() {
           <h1 className="text-2xl font-black text-black dark:text-white">
             Got 30 minutes? Let's talk!
           </h1>
-          <Link
-            href="https://cal.com/gitcoder/30min"
-            target="_blank"
-            className="bg-charcoal hover:bg-charcoal/90 dark:text-charcoal-black w-[210px] px-3 py-2 text-center text-[15px] font-medium tracking-tighter text-white duration-75 dark:bg-white dark:hover:bg-white/90"
-          >
-            Book a Call Now
-          </Link>
+          <Button asChild size='lg'>
+						<Link href="https://cal.com/gitcoder/30min" target="_blank">Book a Call Now</Link>
+					</Button>
         </div>
       </div>
     </section>

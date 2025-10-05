@@ -4,6 +4,7 @@ import PROJECTS from "@/data/projects";
 import Image from "next/image";
 import { ProjectData } from "@/types/types";
 import Link from "next/link";
+import Button from "../ui/button";
 
 interface ProjectProps extends ProjectData {
   index: number;
@@ -38,13 +39,7 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
         </Link>
         <div className="hidden gap-2.5 sm:flex">
           {tags.map((tag, tagIndex) => (
-            <span
-              key={tagIndex}
-              className="px-3 py-2 text-[13px] leading-[14px] font-semibold tracking-tighter"
-              style={{ backgroundColor: tag.color }}
-            >
-              {tag.label}
-            </span>
+            <Button asChild size='sm' style={{ backgroundColor: tag.color }} key={tagIndex}><span>{tag.label}</span></Button>
           ))}
         </div>
       </div>
