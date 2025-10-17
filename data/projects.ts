@@ -17,7 +17,7 @@ const PROJECTS: ProjectData[] = [
   {
     title: "Gitcoders",
     image: GitCodersImage,
-    link: "https://gitcoders.dev",
+    link: "https://v1.gitcoders.dev",
     tags: [
       { label: "NextJS", color: "#F1F5F9" },
       { label: "TailwindCSS", color: "#E0F2FE" },
