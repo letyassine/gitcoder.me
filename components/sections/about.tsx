@@ -18,9 +18,9 @@ export default function About() {
       />
       <div className="space-y-3 px-8 py-5.5 dark:text-white">
         <p>
-          I am a software engineer especially focused on frontend development,
-          architecting React/Next.js solutions, and creating exceptional user
-          experiences.
+          I am a software engineer based in Dubai, UAE 🇦🇪, focused on frontend
+          development, architecting React/Next.js solutions, and creating
+          exceptional user experiences.
         </p>
         <p>
           My passion for frontend technologies continually drives me to advance
