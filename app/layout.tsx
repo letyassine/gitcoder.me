@@ -5,6 +5,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Providers } from "@/components/ui/providers";
 import ThemeToggle from "@/components/ui/theme-toggle";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -84,6 +85,7 @@ export default function RootLayout({
           </div>
           <Header />
           {children}
+          <SpeedInsights />
           <Footer />
         </Providers>
       </body>
