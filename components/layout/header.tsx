@@ -39,7 +39,7 @@ const Header = () => {
       )}
     >
       <div className="cursed bg-fd-background/40 absolute inset-0 -z-10 h-full w-full backdrop-blur-xs" />
-      <Disclosure as="div" className="w-full sm:hidden" defaultOpen={true}>
+      <Disclosure as="div" className="w-full sm:hidden">
         {({ close }) => (
           <>
             <div className="flex w-full items-center justify-between">
