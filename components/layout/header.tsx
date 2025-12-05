@@ -51,13 +51,13 @@ const Header = () => {
                 >
                   GITCODER
                 </Link>
-                <div className="flex items-center gap-1.5 rounded-full bg-gray-100 py-0.5 pr-2 pl-1.5 dark:bg-gray-200/20">
+                {/* <div className="flex items-center gap-1.5 rounded-full bg-gray-100 py-0.5 pr-2 pl-1.5 dark:bg-gray-200/20">
                   <div className="relative">
                     <div className="size-2 rounded-full bg-green-500" />
                     <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75" />
                   </div>
                   <span className="text-[12px] font-medium">Open to work</span>
-                </div>
+                </div> */}
               </div>
               <div className="flex items-center justify-center gap-2">
                 <ThemeToggle />
@@ -125,13 +125,13 @@ const Header = () => {
         <Link href="/" className="font-bold text-black dark:text-white">
           GITCODER
         </Link>
-        <div className="flex items-center gap-1.5 rounded-full bg-gray-100 py-0.5 pr-2 pl-1.5 dark:bg-gray-200/20">
+        {/* <div className="flex items-center gap-1.5 rounded-full bg-gray-100 py-0.5 pr-2 pl-1.5 dark:bg-gray-200/20">
           <div className="relative">
             <div className="size-2 rounded-full bg-green-500" />
             <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75" />
           </div>
           <span className="text-[12px] font-medium">Open to work</span>
-        </div>
+        </div> */}
       </div>
       <ul className="hidden items-center justify-center gap-4 text-[13px] leading-[14px] font-semibold tracking-tighter sm:flex dark:text-white">
         <li className="leading-0 lg:hidden">
