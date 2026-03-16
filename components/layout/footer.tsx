@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 const Links = [
   {
@@ -20,16 +22,27 @@ const Links = [
 ];
 
 const Footer = () => {
+  const path = usePathname();
+
   return (
     <footer className="border-overlay dark:border-charcoal-gray mx-auto flex max-w-3xl items-center justify-between border-x border-y border-b-0 px-6 py-3 dark:text-white">
-      <Link
-        target="_blank"
-        href="https://x.com/thegitcoder"
-        className="group text-[11px] transition-all duration-300"
-      >
-        Built by <span className="group-hover:underline">Gitcoder</span>{" "}
-        <span className="text-[13px]">⟡</span>
-      </Link>
+      {path === "/" ? (
+        <Link
+          href="/how-i-build"
+          className="text-[11px] transition-all duration-300 hover:underline"
+        >
+          How I build ?
+        </Link>
+      ) : (
+        <Link
+          target="_blank"
+          href="https://x.com/thegitcoder"
+          className="group text-[11px] transition-all duration-300"
+        >
+          Built by <span className="group-hover:underline">Gitcoder</span>{" "}
+          <span className="text-[13px]">⟡</span>
+        </Link>
+      )}
       <ul className="flex gap-1 text-lg">
         {Links.map((link) => (
           <a
