@@ -31,7 +31,9 @@ function JobExperience({
             </div>
           ) : null}
         </div>
-        <span className="text-charcoal/80 dark:text-silver-gray">[{date}]</span>
+        <span className="text-charcoal/80 dark:text-silver-gray text-xs md:text-sm">
+          [{date}]
+        </span>
       </div>
     </div>
   );
