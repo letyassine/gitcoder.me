@@ -7,7 +7,9 @@ export interface ProjectData {
   title: string;
   image: any;
   link: string;
-  tags: Tag[];
+  tags?: Tag[];
+  cta?: string;
+  target?: string;
 }
 
 export interface JobExprienceData {

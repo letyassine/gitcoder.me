@@ -10,12 +10,20 @@ interface ProjectProps extends ProjectData {
   index: number;
 }
 
-const Project = ({ title, image, tags, index, link }: ProjectProps) => {
+const Project = ({
+  title,
+  image,
+  tags,
+  index,
+  link,
+  cta = "View Project",
+  target = "_blank",
+}: ProjectProps) => {
   const topOffset = 145 + index * 70;
   const zIndex = 100 + index;
 
   const handleClick = () => {
-    window.open(link, "_blank");
+    window.open(link, target);
   };
 
   return (
@@ -29,7 +37,7 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
       <div className="border-overlay dark:bg-dark-gary dark:border-charcoal-gray flex h-[72px] items-center justify-between border-y bg-[dark:bg-dark-gary] px-8 py-5 text-sm font-medium">
         <Link
           href={link}
-          target="_blank"
+          target={target}
           className="group flex items-center gap-2 duration-100"
         >
           <span className="text-medium-gray dark:text-dim-gray">/</span>
@@ -38,9 +46,17 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
           </h2>
         </Link>
         <div className="hidden gap-2.5 sm:flex">
-          {tags.map((tag, tagIndex) => (
-            <Button asChild size='sm' style={{ backgroundColor: tag.color }} key={tagIndex}><span>{tag.label}</span></Button>
-          ))}
+          {tags &&
+            tags.map((tag, tagIndex) => (
+              <Button
+                asChild
+                size="sm"
+                style={{ backgroundColor: tag.color }}
+                key={tagIndex}
+              >
+                <span>{tag.label}</span>
+              </Button>
+            ))}
         </div>
       </div>
 
@@ -55,7 +71,7 @@ const Project = ({ title, image, tags, index, link }: ProjectProps) => {
         />
         <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <span className="rounded-full bg-black/80 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
-            View Project
+            {cta}
           </span>
         </div>
       </div>
@@ -81,6 +97,8 @@ export default function Projects() {
           link={project.link}
           tags={project.tags}
           index={index}
+          cta={project.cta}
+          target={project.target}
         />
       ))}
     </section>
