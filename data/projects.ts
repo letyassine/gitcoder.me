@@ -1,7 +1,7 @@
 import { ProjectData } from "@/types/types";
 import OpenCutImage from "/public/projects/opencut.jpg";
 import GitCodersImage from "/public/projects/gitcoders-v2.png";
-import MoreprojectsImage from "/public/projects/moreprojects.jpg";
+import MoreprojectsImage from "/public/projects/prjs.jpg";
 import VsCodeImage from "/public/projects/vscode.jpg";
 
 const PROJECTS: ProjectData[] = [
