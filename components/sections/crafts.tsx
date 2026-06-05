@@ -3,6 +3,7 @@ import React from "react";
 import CraftCard from "../ui/craft-card";
 import CtaButton from "../crafts/cta/cta-btn";
 import DropDown from "../crafts/dropdown/drop-down";
+import AnimatedTabs from "../crafts/animated-tabs/animated-tabs";
 
 const Crafts = () => {
   return (
@@ -15,6 +16,9 @@ const Crafts = () => {
       </CraftCard>
       <CraftCard title="call-to-action" className="py-32">
         <CtaButton>Book a Call Now</CtaButton>
+      </CraftCard>
+      <CraftCard title="animated-tabs" className="py-32">
+        <AnimatedTabs />
       </CraftCard>
     </section>
   );
