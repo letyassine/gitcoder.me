@@ -21,7 +21,7 @@ export default function Home() {
       <PatternDivider className="border-b" />
       <Crafts />
       <BookGallrey />
-      <PatternDivider height="h-24" className="border-b" />
+      <PatternDivider height="h-24" className="border-y" />
       <ConnectPrompt />
       <PatternDivider height="h-24" className="border-t" />
       <Contact />

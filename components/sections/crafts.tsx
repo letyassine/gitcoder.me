@@ -7,7 +7,7 @@ import AnimatedTabs from "../crafts/animated-tabs/animated-tabs";
 
 const Crafts = () => {
   return (
-    <section className="border-overlay dark:border-charcoal-gray border-b">
+    <section>
       <h2 className="bg-cream border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
         CRAFTS
       </h2>
