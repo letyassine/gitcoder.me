@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import { Providers } from "@/components/ui/providers";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -76,6 +77,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
+      <head>
+        <Script
+          data-website-id="dfid_YGNI8uZFcHa5Xr2SD36Le"
+          data-domain="gitcoder.me"
+          src="https://datafa.st/js/script.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={`${spaceGrotesk.className} bg-cream dark:bg-charcoal-black`}
       >
