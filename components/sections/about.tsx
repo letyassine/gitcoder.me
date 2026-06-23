@@ -1,6 +1,6 @@
 import Image from "next/image";
 import LogoCloud from "../ui/logo-cloud";
-import hero from "/public/hero.jpg";
+import hero from "/public/new-hero.jpg";
 
 export default function About() {
   return (
