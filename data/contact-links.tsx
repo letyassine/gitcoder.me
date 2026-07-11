@@ -10,7 +10,7 @@ const CONTACT_LINKS = [
   {
     icon: () => <MdOutlineEmail />,
     label: "Email",
-    link: "yassinehaimouch@proton.me",
+    link: "yassinehaimouch@outlook.com",
     color: "#F8E3FF",
   },
   {

@@ -3,13 +3,6 @@ import { JobExprienceData } from "@/types/types";
 export const PREVIOUS_JOBS: JobExprienceData[] = [
   {
     title: "Senior Frontend Developer",
-    companyName: "ValueEQ",
-    companyLink: "https://www.valueeq.com/",
-    location: "Remote",
-    date: "Nov 2024 – Feb 2026",
-  },
-  {
-    title: "Senior Frontend Developer",
     companyName: "Codia",
     companyLink: "https://www.codiadev.it/",
     location: "Remote",
@@ -20,24 +13,24 @@ export const PREVIOUS_JOBS: JobExprienceData[] = [
     companyName: "GoMyCode",
     companyLink: "https://gomycode.com/",
     location: "Casablanca, Morocco",
-    date: "Oct 2023 – Apr 2024",
+    date: "Oct 2022 – Apr 2024",
   },
   {
     title: "Frontend Developer",
     companyName: "Blocks BV",
     companyLink: "https://www.blocxs.one/",
     location: "Remote",
-    date: "Jul 2023 – Oct 2023",
+    date: "Jul 2022 – Oct 2022",
   },
 ];
 
 export const CURRENT_JOBS: JobExprienceData[] = [
   {
-    title: "Software Engineer",
-    companyName: "Confidential",
-    companyLink: "/not-found",
-    location: "Dubai, UAE",
-    date: "Mar 2026 – Present",
+    title: "Senior Frontend Developer",
+    companyName: "ValueEQ",
+    companyLink: "https://www.valueeq.com/",
+    location: "Remote",
+    date: "Dec 2024 – Apr 2026",
   },
   {
     title: "Public speaker & Content creator",
