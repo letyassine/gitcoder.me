@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Space_Grotesk, Cairo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -7,9 +7,20 @@ import { Providers } from "@/components/ui/providers";
 import ThemeToggle from "@/components/ui/theme-toggle";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import LangToggle from "@/components/ui/lang-toggle";
+import { initServerI18next, getT, getResources } from "next-i18next/server";
+import { I18nProvider } from "next-i18next/client";
+import i18nConfig from "./i18n/config";
+
+initServerI18next(i18nConfig);
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  display: "swap",
+});
+
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
   display: "swap",
 });
 
@@ -69,14 +80,20 @@ export const metadata: Metadata = {
     "frontend architecture",
   ],
 };
+export const dynamic = "force-dynamic";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { i18n, lng } = await getT();
+  const resources = getResources(i18n);
+  const fontClass = lng?.startsWith("ar")
+    ? cairo.className
+    : spaceGrotesk.className;
   return (
-    <html lang="en" className="antialiased" suppressHydrationWarning>
+    <html lang={lng} className="antialiased" suppressHydrationWarning>
       <head>
         <Script
           data-website-id="dfid_YGNI8uZFcHa5Xr2SD36Le"
@@ -85,18 +102,19 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body
-        className={`${spaceGrotesk.className} bg-cream dark:bg-charcoal-black`}
-      >
-        <Providers>
-          <div className="fixed top-[19px] right-4 hidden lg:block">
-            <ThemeToggle />
-          </div>
-          <Header />
-          {children}
-          <SpeedInsights />
-          <Footer />
-        </Providers>
+      <body className={`${fontClass} bg-cream dark:bg-charcoal-black`}>
+        <I18nProvider language={lng} resources={resources}>
+          <Providers>
+            <div className="fixed top-[19px] right-4 hidden lg:block">
+              <ThemeToggle />
+              <LangToggle />
+            </div>
+            <Header />
+            {children}
+            <SpeedInsights />
+            <Footer />
+          </Providers>
+        </I18nProvider>
       </body>
     </html>
   );

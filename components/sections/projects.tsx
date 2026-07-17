@@ -1,10 +1,12 @@
 "use client";
 
-import PROJECTS from "@/data/projects";
+import { useProjects } from "@/data/projects";
 import Image from "next/image";
 import { ProjectData } from "@/types/types";
 import Link from "next/link";
 import Button from "../ui/button";
+import { useT } from "next-i18next/client";
+import Dir from "@/app/i18n/dir";
 
 interface ProjectProps extends ProjectData {
   index: number;
@@ -16,7 +18,7 @@ const Project = ({
   tags,
   index,
   link,
-  cta = "View Project",
+  cta,
   target = "_blank",
 }: ProjectProps) => {
   const topOffset = 145 + index * 70;
@@ -27,7 +29,8 @@ const Project = ({
   };
 
   return (
-    <div
+    <Dir
+      as="div"
       className="dark:bg-charcoal-black sticky bg-white"
       style={{
         top: `${topOffset}px`,
@@ -75,18 +78,21 @@ const Project = ({
           </span>
         </div>
       </div>
-    </div>
+    </Dir>
   );
 };
 
 export default function Projects() {
+  const { t } = useT("home");
+  const PROJECTS = useProjects();
   return (
-    <section
+    <Dir
+      as="section"
       className="border-overlay dark:border-charcoal-gray top-[73px] z-30 border-y"
       id="projects"
     >
       <h2 className="bg-cream dark:bg-charcoal-black sticky top-[73px] z-50 w-full px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
-        Projects
+        {t("Projects")}
       </h2>
 
       {PROJECTS.map((project, index) => (
@@ -97,10 +103,10 @@ export default function Projects() {
           link={project.link}
           tags={project.tags}
           index={index}
-          cta={project.cta}
+          cta={project.cta ? project.cta : t("View Project")}
           target={project.target}
         />
       ))}
-    </section>
+    </Dir>
   );
 }
