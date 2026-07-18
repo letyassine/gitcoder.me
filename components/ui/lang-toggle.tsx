@@ -25,22 +25,20 @@ export default function LangToggle() {
       <MenuItems
         anchor="bottom end"
         transition
-        className="border-overlay dark:border-charcoal-gray dark:bg-charcoal-black z-[1000] mt-2 w-36 origin-top rounded-xl border bg-white p-1 shadow-lg transition duration-150 ease-out focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+        className="border-overlay dark:border-charcoal-gray dark:bg-charcoal-black z-[1000] mt-2 origin-top space-y-1 rounded-xl border bg-white p-1 shadow-lg transition duration-150 ease-out focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
       >
         {LANGUAGES.map((lang) => (
           <MenuItem key={lang.code}>
             <button
               type="button"
-              dir={lang.dir}
               onClick={() => changeLanguage(lang.code)}
-              className={`data-[focus]:bg-dark-gary/10 dark:data-[focus]:bg-dark-gary flex w-full cursor-pointer items-center justify-between rounded-lg px-3 py-2 text-sm dark:text-white ${
-                current === lang.code ? "font-semibold" : ""
+              className={`dark:data-[focus]:bg-dark-gary flex w-23 cursor-pointer items-center justify-center gap-2 rounded-lg px-3 py-2 text-center text-sm dark:text-white ${
+                current === lang.code
+                  ? "bg-dark-gary/10 dark:bg-dark-gary font-semibold"
+                  : "data-[focus]:bg-dark-gary/10"
               }`}
             >
-              {lang.label}
-              {current === lang.code && (
-                <span className="text-purple text-xs">●</span>
-              )}
+              <span>{lang.label}</span>
             </button>
           </MenuItem>
         ))}
