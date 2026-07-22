@@ -99,7 +99,7 @@ const Header = () => {
                   <li>
                     <DisclosureButton
                       as="a"
-                      href="https://drive.proton.me/urls/1YSWQN4HBM#Ra11uAKe5TGZ"
+                      href="https://drive.proton.me/urls/X729B20N6W#POXwkSTeyRVY"
                       target="_blank"
                       className="block p-4 hover:bg-white/20"
                     >
@@ -149,7 +149,7 @@ const Header = () => {
         </li>
         <li>
           <Link
-            href="https://drive.proton.me/urls/1YSWQN4HBM#Ra11uAKe5TGZ"
+            href="https://drive.proton.me/urls/X729B20N6W#POXwkSTeyRVY"
             target="_blank"
             className="hover:underline"
           >
