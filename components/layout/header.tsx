@@ -13,6 +13,8 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
+import { useT } from "next-i18next/client";
+import Dir from "@/app/i18n/dir";
 
 const BodyScrollLock = () => {
   useLockBodyScroll();
@@ -21,6 +23,7 @@ const BodyScrollLock = () => {
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const { t } = useT("header");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +35,8 @@ const Header = () => {
   }, []);
 
   return (
-    <nav
+    <Dir
+      as="nav"
       className={cn(
         "border-overlay dark:border-charcoal-gray sticky top-0 z-[1000] mx-auto flex h-[73px] w-full max-w-3xl items-center justify-between border-x border-b p-4 backdrop-blur-xl sm:p-6",
         isScrolled ? "dark:bg-charcoal-black/80 bg-white/80" : "",
@@ -56,7 +60,9 @@ const Header = () => {
                     <div className="size-2 rounded-full bg-green-500" />
                     <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75" />
                   </div>
-                  <span className="text-[12px] font-medium">Open to work</span>
+                  <span className="text-[12px] font-medium">
+                    {t("Open to work")}
+                  </span>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-2">
@@ -84,7 +90,7 @@ const Header = () => {
                       href="/#about"
                       className="block p-4 hover:bg-white/20"
                     >
-                      About
+                      {t("About")}
                     </DisclosureButton>
                   </li>
                   <li>
@@ -93,7 +99,7 @@ const Header = () => {
                       href="/#projects"
                       className="block p-4 hover:bg-white/20"
                     >
-                      Projects
+                      {t("Projects")}
                     </DisclosureButton>
                   </li>
                   <li>
@@ -103,7 +109,7 @@ const Header = () => {
                       target="_blank"
                       className="block p-4 hover:bg-white/20"
                     >
-                      Resume
+                      {t("Resume")}
                     </DisclosureButton>
                   </li>
                   <li>
@@ -112,7 +118,7 @@ const Header = () => {
                       href="/#contact"
                       className="bg-charcoal dark:text-charcoal-black hover:bg-charcoal/90 block w-fit p-4 text-white duration-75 dark:bg-white dark:hover:bg-white/90"
                     >
-                      Contact
+                      {t("Contact")}
                     </DisclosureButton>
                   </li>
                 </ul>
@@ -130,7 +136,7 @@ const Header = () => {
             <div className="size-2 rounded-full bg-green-500" />
             <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75" />
           </div>
-          <span className="text-[12px] font-medium">Open to work</span>
+          <span className="text-[12px] font-medium"> {t("Open to work")}</span>
         </div>
       </div>
       <ul className="hidden items-center justify-center gap-4 text-[13px] leading-[14px] font-semibold tracking-tighter sm:flex dark:text-white">
@@ -139,12 +145,12 @@ const Header = () => {
         </li>
         <li>
           <Link href="/#about" className="hover:underline">
-            About
+            {t("About")}
           </Link>
         </li>
         <li>
           <Link href="/#projects" className="hover:underline">
-            Projects
+            {t("Projects")}
           </Link>
         </li>
         <li>
@@ -153,16 +159,16 @@ const Header = () => {
             target="_blank"
             className="hover:underline"
           >
-            Resume
+            {t("Resume")}
           </Link>
         </li>
         <li>
           <Button asChild>
-            <Link href="/#contact">Contact</Link>
+            <Link href="/#contact">{t("Contact")}</Link>
           </Button>
         </li>
       </ul>
-    </nav>
+    </Dir>
   );
 };
 

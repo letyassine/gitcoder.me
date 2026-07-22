@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { JobExprienceData } from "@/types/types";
-import { CURRENT_JOBS, PREVIOUS_JOBS } from "@/data/experience";
+import { useCurrentJobs, usePreviousJobs } from "@/data/experience";
+import { useT } from "next-i18next/client";
+import Dir from "@/app/i18n/dir";
 
 function JobExperience({
   title,
@@ -10,7 +14,10 @@ function JobExperience({
   location,
 }: JobExprienceData) {
   return (
-    <div className="border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-sm">
+    <Dir
+      as="div"
+      className="border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-sm"
+    >
       <div className="flex items-center justify-between">
         <div>
           <div className="dark:text-light-gray font-medium">{title}</div>
@@ -35,18 +42,23 @@ function JobExperience({
           [{date}]
         </span>
       </div>
-    </div>
+    </Dir>
   );
 }
 
 export default function Experience() {
+  const { t } = useT("home");
+  const PREVIOUS_JOBS = usePreviousJobs();
+  const CURRENT_JOBS = useCurrentJobs();
+
   return (
-    <section
+    <Dir
+      as="section"
       className="border-overlay dark:bg-charcoal-black top-[73px] z-30"
       id="experience"
     >
       <h2 className="bg-cream border-overlay dark:bg-charcoal-black dark:border-charcoal-gray dark:text-light-gray sticky top-[73px] z-50 border-b px-8 py-5.5 text-xl font-bold text-black uppercase">
-        Experience
+        {t("Experience")}
       </h2>
       <div>
         <div
@@ -55,7 +67,7 @@ export default function Experience() {
         >
           <div className="flex items-center gap-2 px-8 py-5.5 text-sm font-medium">
             <span className="text-medium-gray dark:text-dim-gray">/</span>
-            <h3>Current</h3>
+            <h3>{t("Current")}</h3>
           </div>
         </div>
         {CURRENT_JOBS.map((job) => (
@@ -65,12 +77,12 @@ export default function Experience() {
       <div className="bg-cream sticky z-50">
         <div className="border-overlay dark:bg-dark-gary dark:border-charcoal-gray dark:text-light-gray -mt-px flex items-center gap-2 border-t border-b bg-white px-8 py-5.5 text-sm font-medium">
           <span className="text-medium-gray dark:text-dim-gray">/</span>
-          <h3>Previous</h3>
+          <h3>{t("Previous")}</h3>
         </div>
         {PREVIOUS_JOBS.map((job) => (
           <JobExperience key={job.companyName} {...job} />
         ))}
       </div>
-    </section>
+    </Dir>
   );
 }

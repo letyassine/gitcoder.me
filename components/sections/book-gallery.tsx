@@ -6,12 +6,15 @@ import { JSX } from "react";
 import BOOKS from "@/data/books";
 import PatternDivider from "../ui/pattern-divider";
 import Image from "next/image";
+import { useT } from "next-i18next/client";
+import Dir from "@/app/i18n/dir";
 
 const animationStyle = "transition-all duration-500 ease will-change-auto";
 
 export default function BookGallrey(): JSX.Element | null {
   const [focusedIndex, setFocusedIndex] = useState(2);
   const [shouldRender, setShouldRender] = useState(true);
+  const { t } = useT("home");
 
   useEffect(() => {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -32,9 +35,12 @@ export default function BookGallrey(): JSX.Element | null {
   return (
     <section>
       <PatternDivider className="" />
-      <h2 className="bg-cream border-overlay dark:bg-charcoal-black dark:border-charcoal-gray w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
-        BOOKSHELF
-      </h2>
+      <Dir
+        as="h2"
+        className="bg-cream border-overlay dark:bg-charcoal-black dark:border-charcoal-gray w-full border-y px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white"
+      >
+        {t("Bookshelf")}
+      </Dir>
       <div className="border-overlay overflow-hidden border-b p-8">
         <svg className="invisible absolute inset-0">
           <defs>

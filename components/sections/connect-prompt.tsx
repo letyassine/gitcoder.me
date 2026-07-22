@@ -1,9 +1,14 @@
+"use client";
+import Dir from "@/app/i18n/dir";
+import { useT } from "next-i18next/client";
+
 export default function ConnectPrompt() {
+  const { t } = useT("home");
   return (
-    <section className="p-8">
+    <Dir as="section" className="p-8">
       <h1 className="text-3xl font-bold text-black sm:text-6xl dark:text-white">
-        Think we'd work well together? I think so too
+        {t("ConnectPrompt")}
       </h1>
-    </section>
+    </Dir>
   );
 }

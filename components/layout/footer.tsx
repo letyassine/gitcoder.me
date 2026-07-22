@@ -1,8 +1,11 @@
 "use client";
+
 import React from "react";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { usePathname } from "next/navigation";
+import { useT } from "next-i18next/client";
+import Dir from "@/app/i18n/dir";
 
 const Links = [
   {
@@ -23,15 +26,19 @@ const Links = [
 
 const Footer = () => {
   const path = usePathname();
+  const { t } = useT("home");
 
   return (
-    <footer className="border-overlay dark:border-charcoal-gray mx-auto flex max-w-3xl items-center justify-between border-x border-y border-b-0 px-6 py-3 dark:text-white">
+    <Dir
+      as="footer"
+      className="border-overlay dark:border-charcoal-gray mx-auto flex max-w-3xl items-center justify-between border-x border-y border-b-0 px-6 py-3 dark:text-white"
+    >
       {path === "/" ? (
         <Link
           href="/how-i-build"
           className="text-[11px] transition-all duration-300 hover:underline"
         >
-          How I build ?
+          {t("How I build ?")}
         </Link>
       ) : (
         <Link
@@ -39,7 +46,8 @@ const Footer = () => {
           href="https://x.com/thegitcoder"
           className="group text-[11px] transition-all duration-300"
         >
-          Built by <span className="group-hover:underline">Gitcoder</span>{" "}
+          {t("Built by")}{" "}
+          <span className="group-hover:underline">Gitcoder</span>{" "}
           <span className="text-[13px]">⟡</span>
         </Link>
       )}
@@ -108,7 +116,7 @@ const Footer = () => {
           </a>
         ))}
       </ul>
-    </footer>
+    </Dir>
   );
 };
 

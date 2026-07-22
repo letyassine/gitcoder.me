@@ -6,10 +6,13 @@ import CONTACT_LINKS from "@/data/contact-links";
 import { MdContentCopy } from "react-icons/md";
 import { cn } from "@/lib/utils";
 import Button from "../ui/button";
+import { useT } from "next-i18next/client";
+import Dir from "@/app/i18n/dir";
 
 export default function Contact() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const { t } = useT("home");
 
   const handleEmailCopy = async (email: string) => {
     try {
@@ -26,9 +29,12 @@ export default function Contact() {
       className="border-overlay dark:border-charcoal-gray max-w-3xl border-t"
       id="contact"
     >
-      <h2 className="border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white">
-        Contact
-      </h2>
+      <Dir
+        as="h2"
+        className="border-overlay dark:bg-charcoal-black dark:border-charcoal-gray border-b px-8 py-5.5 text-xl font-bold text-black uppercase dark:text-white"
+      >
+        {t("Contact")}
+      </Dir>
       <div className="grid grid-cols-3 gap-0">
         {CONTACT_LINKS.map((link, index) => {
           const isLastRow = index >= 6;
@@ -94,11 +100,13 @@ export default function Contact() {
       <div className="border-overlay dark:border-charcoal-gray mx-auto h-52 max-w-3xl border-t">
         <div className="border-overlay dark:border-charcoal-gray mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8">
           <h1 className="text-2xl font-black text-black dark:text-white">
-            Got 30 minutes? Let's talk!
+            {t("CTACalendar")}
           </h1>
-          <Button asChild size='lg'>
-						<Link href="https://cal.com/gitcoder/30min" target="_blank">Book a Call Now</Link>
-					</Button>
+          <Button asChild size="lg">
+            <Link href="https://cal.com/gitcoder/30min" target="_blank">
+              {t("Book a Call Now")}
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
