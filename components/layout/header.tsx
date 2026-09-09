@@ -105,16 +105,6 @@ const Header = () => {
                   <li>
                     <DisclosureButton
                       as="a"
-                      href="https://drive.proton.me/urls/X729B20N6W#POXwkSTeyRVY"
-                      target="_blank"
-                      className="block p-4 hover:bg-white/20"
-                    >
-                      {t("Resume")}
-                    </DisclosureButton>
-                  </li>
-                  <li>
-                    <DisclosureButton
-                      as="a"
                       href="/#contact"
                       className="bg-charcoal dark:text-charcoal-black hover:bg-charcoal/90 block w-fit p-4 text-white duration-75 dark:bg-white dark:hover:bg-white/90"
                     >
@@ -151,15 +141,6 @@ const Header = () => {
         <li>
           <Link href="/#projects" className="hover:underline">
             {t("Projects")}
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://drive.proton.me/urls/X729B20N6W#POXwkSTeyRVY"
-            target="_blank"
-            className="hover:underline"
-          >
-            {t("Resume")}
           </Link>
         </li>
         <li>
