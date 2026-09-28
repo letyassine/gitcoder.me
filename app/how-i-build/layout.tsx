@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "How I build — Frontend Engineer",
+  title: "How I build — Software Engineer",
   description:
     "How I build modern, scalable web applications — my stack, architecture principles, and engineering approach.",
   openGraph: {

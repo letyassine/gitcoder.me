@@ -7,7 +7,7 @@ export function usePreviousJobs(): JobExprienceData[] {
 
   return [
     {
-      title: t("Senior Frontend Developer"),
+      title: t("Senior Software Engineer"),
       companyName: "Codia",
       companyLink: "https://www.codiadev.it/",
       location: t("Remote"),
@@ -21,7 +21,7 @@ export function usePreviousJobs(): JobExprienceData[] {
       date: t("Oct 2022 – Apr 2024"),
     },
     {
-      title: t("Frontend Developer"),
+      title: t("Software Engineer"),
       companyName: "Blocks BV",
       companyLink: "https://www.blocxs.one/",
       location: t("Remote"),
@@ -35,7 +35,7 @@ export function useCurrentJobs(): JobExprienceData[] {
 
   return [
     {
-      title: t("Senior Frontend Developer"),
+      title: t("Senior Software Engineer"),
       companyName: "ValueEQ",
       companyLink: "https://www.valueeq.com/",
       location: t("Remote"),
