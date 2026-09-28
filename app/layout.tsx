@@ -25,9 +25,9 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Yassine — Frontend Engineer",
+  title: "Yassine — Software Engineer",
   description:
-    "I'm Yassine — a Frontend Engineer from Morocco passionate about building meaningful web experiences that combine technical expertise with creative innovation.",
+    "I'm Yassine — a Software Engineer from Morocco passionate about building meaningful web experiences that combine technical expertise with creative innovation.",
   icons: {
     icon: [
       {
