@@ -58,7 +58,7 @@ const Header = () => {
                 <div className="flex items-center gap-1.5 rounded-full bg-gray-100 py-0.5 pr-2 pl-1.5 dark:bg-gray-200/20">
                   <div className="relative">
                     <div className="size-2 rounded-full bg-green-500" />
-                    <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75" />
+                    <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75 motion-reduce:animate-none" />
                   </div>
                   <span className="text-[12px] font-medium">
                     {t("Open to work")}
@@ -67,16 +67,19 @@ const Header = () => {
               </div>
               <div className="flex items-center justify-center gap-2">
                 <ThemeToggle />
-                <DisclosureButton className="group flex w-full items-center justify-between">
-                  <TbMenu3
-                    size={24}
-                    className="block size-6 group-data-open:hidden dark:text-white"
-                  />
-                  <IoClose
-                    size={24}
-                    className="hidden size-6 group-data-open:block dark:text-white"
-                  />
-                </DisclosureButton>
+                <DisclosureButton
+                aria-label="Toggle menu"
+                className="group flex w-full items-center justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2 dark:focus-visible:ring-white"
+              >
+                <TbMenu3
+                  size={24}
+                  className="block size-6 group-data-open:hidden dark:text-white"
+                />
+                <IoClose
+                  size={24}
+                  className="hidden size-6 group-data-open:block dark:text-white"
+                />
+              </DisclosureButton>
               </div>
             </div>
             <DisclosurePanel className="absolute top-18 right-0 h-[calc(100vh-72px)] w-full">
@@ -123,8 +126,8 @@ const Header = () => {
         </Link>
         <div className="flex items-center gap-1.5 rounded-full bg-gray-100 py-0.5 pr-2 pl-1.5 dark:bg-gray-200/20">
           <div className="relative">
-            <div className="size-2 rounded-full bg-green-500" />
-            <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75" />
+                    <div className="size-2 rounded-full bg-green-500" />
+                    <div className="absolute inset-0 size-2 animate-ping rounded-full bg-green-500/60 opacity-75 motion-reduce:animate-none" />
           </div>
           <span className="text-[12px] font-medium"> {t("Open to work")}</span>
         </div>

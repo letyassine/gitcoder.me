@@ -44,10 +44,12 @@ export default function Contact() {
 
           if (isEmail) {
             return (
-              <div
+              <button
                 key={link.label}
+                type="button"
+                aria-label="Copy email to clipboard"
                 className={cn(
-                  "border-overlay hover:text-charcoal-black dark:border-charcoal-gray flex cursor-copy justify-center gap-2 p-8 text-sm transition-all duration-200 sm:justify-normal dark:text-white",
+                  "border-overlay hover:text-charcoal-black dark:border-charcoal-gray flex cursor-pointer justify-center gap-2 p-8 text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2 sm:justify-normal dark:text-white dark:focus-visible:ring-white",
                   !isLastColumn && "border-r",
                   !isLastRow && "border-b",
                 )}
@@ -68,7 +70,7 @@ export default function Contact() {
                     <span className={"hidden sm:block"}>{link.label}</span>
                   )}
                 </span>
-              </div>
+              </button>
             );
           }
 
@@ -99,9 +101,9 @@ export default function Contact() {
       </div>
       <div className="border-overlay dark:border-charcoal-gray mx-auto h-52 max-w-3xl border-t">
         <div className="border-overlay dark:border-charcoal-gray mx-auto flex max-w-lg flex-col items-center gap-6 border-x p-8">
-          <h1 className="text-2xl font-black text-black dark:text-white">
+          <h2 className="text-2xl font-black text-black dark:text-white">
             {t("CTACalendar")}
-          </h1>
+          </h2>
           <Button asChild size="lg">
             <Link href="https://cal.com/gitcoder/30min" target="_blank">
               {t("Book a Call Now")}

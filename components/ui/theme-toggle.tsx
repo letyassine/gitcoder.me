@@ -9,7 +9,8 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className="dark:hover:bg-dark-gary hover:bg-dark-gary/10 flex cursor-pointer items-center justify-center rounded-full p-2"
+      aria-label="Toggle theme"
+      className="dark:hover:bg-dark-gary hover:bg-dark-gary/10 flex cursor-pointer items-center justify-center rounded-full p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2 dark:focus-visible:ring-white"
       onClick={() => setTheme(otherTheme)}
     >
       <MdOutlineDarkMode size={18} className="dark:hidden dark:text-white" />

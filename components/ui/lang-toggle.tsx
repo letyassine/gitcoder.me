@@ -18,7 +18,7 @@ export default function LangToggle() {
     <Menu as="div" className="relative">
       <MenuButton
         aria-label="Change language"
-        className="dark:hover:bg-dark-gary hover:bg-dark-gary/10 flex cursor-pointer items-center justify-center rounded-full p-2 dark:text-white"
+        className="dark:hover:bg-dark-gary hover:bg-dark-gary/10 flex cursor-pointer items-center justify-center rounded-full p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2 dark:text-white dark:focus-visible:ring-white"
       >
         <MdLanguage size={18} />
       </MenuButton>
@@ -32,7 +32,7 @@ export default function LangToggle() {
             <button
               type="button"
               onClick={() => changeLanguage(lang.code)}
-              className={`dark:data-[focus]:bg-dark-gary flex w-23 cursor-pointer items-center justify-center gap-2 rounded-lg px-3 py-2 text-center text-sm dark:text-white ${
+              className={`dark:data-[focus]:bg-dark-gary flex w-23 cursor-pointer items-center justify-center gap-2 rounded-lg px-3 py-2 text-center text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal dark:text-white dark:focus-visible:ring-white ${
                 current === lang.code
                   ? "bg-dark-gary/10 dark:bg-dark-gary font-semibold"
                   : "data-[focus]:bg-dark-gary/10"
