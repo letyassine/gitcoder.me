@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <main className="border-overlay dark:border-charcoal-gray mx-auto max-w-3xl border-x">
       <Hero />
-      <PatternDivider />
       <About />
       <PatternDivider />
       <Experience />
